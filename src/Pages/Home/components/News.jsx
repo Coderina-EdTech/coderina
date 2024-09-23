@@ -49,9 +49,7 @@ const News = () => {
                 <Grid container className="news__cards">
                     {newsCard.map((cardInfo, i) => (
                         <SolutionCards key={i} {...cardInfo}
-                            childern={
-                                <Typography>Sep 2, 2023</Typography>
-                            }
+                            childern={"Sep 2, 2023"}
                         />
                     ))}
                 </Grid>
