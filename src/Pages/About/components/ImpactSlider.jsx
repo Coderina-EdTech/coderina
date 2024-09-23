@@ -23,7 +23,8 @@ const ImpactSlider = () => {
         },
         {
             number: "64",
-            text: "New Businesses Incubated"
+            text: <>New Businesses <br /> Incubated</>
+
         }
     ]
 

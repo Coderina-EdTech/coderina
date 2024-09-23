@@ -7,7 +7,7 @@ import CustomButton from './CustomButton'
 const Navbar = () => {
   const links = [
     { label: 'About us', path: '/about' },
-    { label: 'What we do', path: '/info' },
+    { label: 'What we do', path: '/what we do' },
     { label: 'Events', path: '/events' },
     { label: 'Media', path: '/media' },
   ]

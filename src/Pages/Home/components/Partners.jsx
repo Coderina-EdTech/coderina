@@ -13,6 +13,7 @@ import uol from "../../../assets/UOL.png"
 import CustomButton from './CustomButton'
 import Grid from '@mui/material/Grid2';
 import { Input } from 'antd'
+import Subscribe from './Subscribe'
 
 
 const Partners = () => {
@@ -34,17 +35,7 @@ const Partners = () => {
                     <CustomButton>Become a Sponsor</CustomButton>
                 </Stack>
             </Stack>
-            <Grid container className="partner__signup">
-                <Grid size={{ xs: 12, md: 4.8 }}>
-                    <Typography variant='h4'>Sign up for our Newsletter to receive news and updates.</Typography>
-                </Grid>
-                <Grid size={{ xs: 12, md: 4.8 }}>
-                    <form action="submit">
-                        <Input type="email" placeholder='Enter email address' />
-                        <CustomButton orange>Subscribe</CustomButton>
-                    </form>
-                </Grid>
-            </Grid>
+            <Subscribe />
         </Box>
     )
 }

@@ -1,10 +1,14 @@
 import { Box, Container } from '@mui/material'
 import React from 'react'
-import { blackCard, greenCard2, pinkBgR, whiteColor } from '../../utils/constants'
+import { blackCard, blackColor, blueCard2, greenCard2, pinkBg, pinkBgR, whiteColor } from '../../utils/constants'
 import AboutHeader from './components/AboutHeader'
 import AboutImpact from './components/AboutImpact'
 import AboutMV from './components/AboutMV'
 import CoreValues from './components/CoreValues'
+import Scope from './components/Scope'
+import OurTeam from './components/OurTeam'
+import Partners from '../Home/components/Partners'
+import Footer from '../Home/components/Footer'
 
 const AboutUs = () => {
     const aboutContent = [
@@ -24,6 +28,22 @@ const AboutUs = () => {
             color: blackCard,
             section: <CoreValues />
         },
+        {
+            color: blueCard2,
+            section: <Scope />
+        },
+        {
+            color: whiteColor,
+            section: <OurTeam />
+        },
+        {
+            color: pinkBg,
+            section: <Partners />
+        },
+        {
+            color: blackColor,
+            section: <Footer />
+        }
     ]
 
     return (

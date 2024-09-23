@@ -8,6 +8,7 @@ import newsImg2 from "../../../assets/newsImg2.png"
 import newsImg3 from "../../../assets/newsImg3.png"
 import newsImg4 from "../../../assets/newsImg4.png"
 import newsLgImg from "../../../assets/news-ImgLg.png"
+import SolutionCards from '../../components/SolutionCards';
 
 
 const News = () => {
@@ -46,14 +47,12 @@ const News = () => {
                     <CustomButton orange >View all <FaArrowRightLong /></CustomButton>
                 </Stack>
                 <Grid container className="news__cards">
-                    {newsCard.map(({ img, text }) => (
-                        <Grid size={{ xs: 12, md: 2.89 }} key={text}>
-                            <Card>
-                                <CardMedia component={"img"} image={img} />
-                            </Card>
-                            <Typography>Sep 2, 2023</Typography>
-                            <Typography>{text}</Typography>
-                        </Grid>
+                    {newsCard.map((cardInfo, i) => (
+                        <SolutionCards key={i} {...cardInfo}
+                            childern={
+                                <Typography>Sep 2, 2023</Typography>
+                            }
+                        />
                     ))}
                 </Grid>
             </Stack>
