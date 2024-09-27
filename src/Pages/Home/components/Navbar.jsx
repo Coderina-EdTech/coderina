@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Box, Container, Stack } from '@mui/material'
 import logo from '../../../assets/coderinaLogo.png'
 import { Link, NavLink } from 'react-router-dom'
 import CustomButton from './CustomButton'
+import { yellowBg } from '../../../utils/constants'
 
 const Navbar = () => {
+  const [noBg, addBg] = useState("navTwo")
+
   const links = [
     { label: 'About us', path: '/about' },
     { label: 'What we do', path: '/what we do' },
@@ -12,9 +15,17 @@ const Navbar = () => {
     { label: 'Media', path: '/media' },
   ]
 
+  const addBgColor = () => {
+    if (window.scrollY >= 10) {
+      addBg(yellowBg)
+    } else {
+      addBg('')
+    }
+  }
+  window.addEventListener("scroll", addBgColor)
 
   return (
-    <Box component={"nav"} className='nav__body'>
+    <Box component={"nav"} className='nav__body' bgcolor={noBg}>
       <Container maxWidth="xl">
         <Stack className='nav__container'>
           <Link to={"/"}>

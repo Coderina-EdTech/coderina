@@ -5,6 +5,7 @@ import AboutUs from './Pages/About/AboutUs'
 import WhatWedo from './Pages/What we do/WhatWedo'
 import Events from './Pages/Events/Events'
 import Media from './Pages/Media/Media'
+import FirstLego from './Pages/FirstLego/FirstLego'
 function App() {
 
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/what we do" element={<WhatWedo />} />
         <Route exact path="/events" element={<Events />} />
         <Route exact path="/media" element={<Media />} />
+        <Route exact path="/first lego" element={<FirstLego />} />
       </Routes>
     </Router>
   )

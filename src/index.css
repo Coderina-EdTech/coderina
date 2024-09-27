@@ -107,7 +107,7 @@ a {
   }
 
   img {
-    width: 370px;
+    width: 270px;
   }
 }
 
@@ -321,7 +321,6 @@ a {
 }
 
 .activity__img {
-  /* position: relative; */
   height: 310px;
   padding: 0 !important;
 
@@ -349,7 +348,6 @@ a {
       flex-direction: column;
       gap: 1em;
       justify-content: center;
-      /* border: 1px solid red; */
 
       >a {
         line-height: 2em;
@@ -364,7 +362,7 @@ a {
   }
 
   >div {
-    background: var(--blueCard) !important;
+    background: var(--blueCard);
 
     h6 {
       font-size: 12px;
@@ -463,23 +461,31 @@ a {
       margin: 0 0 10px;
     }
 
-    p:nth-child(2) {
-      color: #1B2C32;
-      font-size: 14px;
+    p {
       font-weight: 400;
       font-family: var(--fontStyle1);
     }
 
+    p:nth-child(2) {
+      color: #1B2C32;
+      font-size: 14px;
+    }
+
     p:nth-child(3) {
-      font-size: 17.7px;
-      font-weight: 500;
-      font-family: var(--fontStyle1);
+      color: #7A4F03;
+      font-size: 14px;
+      font-weight: 600;
     }
 
     p:nth-child(4) {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    p:nth-child(5) {
       color: #00A859;
-      font-size: 17.7px;
-      font-weight: 600;
+      font-size: 14px;
+      font-weight: 500;
       font-family: var(--fontStyle1);
     }
   }
@@ -536,11 +542,9 @@ a {
   justify-content: center;
   align-items: center;
   gap: 1.5em;
-  margin: 0 0 2em;
 
   h6 {
-    font-size: 24px;
-    font-weight: 600;
+    font-weight: 700;
     font-family: var(--fontStyle);
   }
 }
@@ -550,11 +554,17 @@ a {
   padding: 3em;
   border-radius: 1em;
   gap: 2em;
-  margin-bottom: 1em;
+  /* margin-bottom: 1em; */
+  width: 100%;
+
+  img {
+    height: 35px;
+    /* border: 1px solid red; */
+  }
 
   >div:first-child {
-    gap: 3em;
-    justify-content: space-between;
+    gap: 3em !important;
+    justify-content: space-between !important;
 
     div {
       display: flex;
@@ -577,6 +587,7 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 3em;
+  margin-bottom: 2em;
   border-radius: 1em;
 
   h4 {
@@ -700,6 +711,11 @@ a {
   p {
     font-family: var(--fontStyle1);
   }
+
+  h4 {
+    font-weight: 600;
+    font-family: var(--fontStyle);
+  }
 }
 
 /* AboutHeader */
@@ -708,8 +724,6 @@ a {
 
   h4 {
     font-size: 35px;
-    font-weight: 600;
-    font-family: var(--fontStyle);
     /* width: 55%; */
   }
 
@@ -766,29 +780,26 @@ a {
 
   h4 {
     font-size: 40px;
-    font-weight: 600;
-    font-family: var(--fontStyle);
   }
 }
 
 .impact__carousel {
-  border: 1px solid #14B96C;
+  /* border: 1px solid #14B96C; */
   border-radius: 1em;
 }
 
 .impact__card {
-  background: #ADF7D4;
-  border-right: 1px solid #14B96C;
+  /* background: #ADF7D4; */
+  /* border-right: 1px solid #14B96C; */
+  height: 34vh;
 
 
-  h3 {
+  h4 {
     font-size: 50px;
-    font-weight: 600;
-    font-family: var(--fontStyle);
   }
 
   p {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
   }
 
@@ -925,8 +936,6 @@ a {
 
   h4 {
     font-size: 30px;
-    font-weight: 600;
-    font-family: var(--fontStyle);
   }
 
   >div:first-child {
@@ -1190,7 +1199,7 @@ a {
       border-radius: 2em;
       font-size: 13px;
       font-family: var(--fontStyle1);
-      /* background: #FFFFFF; */
+      font-weight: 600;
       color: #1D1D1D;
     }
 
@@ -1198,7 +1207,149 @@ a {
       flex-direction: row;
       background: rgba(26, 26, 26, 0.04);
       border-radius: 2em;
-      gap: 0.5em;
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* First Lego */
+.first__lego {
+  h4 {
+    font-family: var(--fontStyle);
+    font-weight: 700;
+  }
+
+  p {
+    font-family: var(--fontStyle1);
+    font-weight: 400;
+
+  }
+}
+
+/* Lego Header */
+.lego__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 5em 0;
+  background: var(--pinkBg);
+  padding: 1.5em;
+  text-align: center;
+  border-radius: 1em;
+  gap: 3em;
+
+  h4 {
+    width: 60%;
+    font-size: 27px;
+  }
+
+  button {
+    font-size: 13px;
+    font-weight: 300;
+    padding: .8em 1.8em;
+    letter-spacing: .1em;
+  }
+
+  >div:first-child {
+    align-items: center;
+    gap: 1em;
+  }
+
+  >div:last-child {
+    width: 100%;
+    height: 500px;
+    border-radius: 1em;
+    overflow: hidden;
+  }
+}
+
+/* Lego Card */
+
+.lego__card {
+  justify-content: space-between;
+  margin: 2em 0;
+
+  h4 {
+    font-size: 34px;
+  }
+
+  p {
+    font-size: 17px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  button {
+    font-size: 13px;
+    width: 125px;
+    letter-spacing: .1em;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* gap: 1em !important; */
+  }
+}
+
+/* Lego Program */
+.lego__program {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  margin: 2em 0;
+
+  p {
+    font-size: 13px;
+  }
+
+  >div {
+    justify-content: space-between;
+
+    >div {
+      div {
+        gap: 1em;
+      }
+    }
+  }
+}
+
+/* Lego Impact */
+.lego__impact {
+  >h4 {
+    text-align: center;
+    font-size: 35px;
+  }
+}
+
+/* Resources */
+.resource__container {
+  >div {
+    flex-direction: row;
+    gap: 1em;
+    justify-content: space-between;
+
+    a {
+      /* border: 1px solid red; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .5em;
+    }
+
+    div {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: .5em;
+      /* border: 1px solid red; */
     }
   }
 }
