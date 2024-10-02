@@ -19,7 +19,7 @@ const Footer = () => {
         {
             title: "Address",
             content: [
-                <><RiMapPin3Fill color={redColor} /> 4 Ngozi Okonjo Iweala way, Utako district</>,
+                <><RiMapPin3Fill color={redColor} /> 4 Ngozi Okonjo Iweala way, Utako district Abuja</>,
                 <><RiMapPin3Fill color={redColor} /> 4 Oye Balogun St, Lekki Penninsula II, Lekki Lagos</>,
                 <><TbClockHour3Filled color={yellowColor} /> Mon - Fri 9.00 - 5.00</>,
             ]
