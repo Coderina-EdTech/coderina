@@ -25,7 +25,7 @@ const Partners = ({ sponsor }) => {
 
     if (sponsor) return (
         <Box className="partner__container sec__container">
-            {/* <Resources /> */}
+            <Resources />
             <Stack className='partner__card'>
                 <Grid container sx={{ p: "0 8em" }}>
                     {legoLogos.map((logo) => (

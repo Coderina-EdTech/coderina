@@ -1,21 +1,22 @@
 import { Button } from '@mui/material'
 import React from 'react'
 // import { fontStyle } from '../../'
-import { fontStyle1 } from '../../../utils/constants'
+import { fontStyle, fontStyle1 } from '../../../utils/constants'
 
-const CustomButton = ({ children, orange, stlyes, isLarge }) => {
+const CustomButton = ({ children, orange, stlyes, bold, isLarge }) => {
   return (
     <Button
       variant={"contained"}
       sx={{
+        padding: isLarge ? ".9em 1.8em" : "",
         bgcolor: orange ? "#FBB12F" : "#201E1E",
         borderRadius: 10,
-        py: isLarge ? 1.5 : "",
-        fontSize: "16px",
+        fontSize: "13px",
         textTransform: "none",
-        fontWeight: 500,
+        fontWeight: bold ? 600 : 300,
         color: orange ? "#080F12" : "#fff",
-        fontFamily: fontStyle1,
+        fontFamily: fontStyle,
+        gap: ".7em",
         ...stlyes
       }}
     >

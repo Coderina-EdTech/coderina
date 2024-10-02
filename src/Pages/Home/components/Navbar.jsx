@@ -36,7 +36,7 @@ const Navbar = () => {
               <NavLink key={label} to={path}>{label}</NavLink>
             ))}
           </Stack>
-          <CustomButton orange>
+          <CustomButton orange bold>
             Get Involved
           </CustomButton>
         </Stack>

@@ -14,7 +14,7 @@ const LegoCard2 = () => {
                 <Typography variant='h4'>A chance to shine!</Typography>
                 <Typography>Each FIRST LEGO League season culminates with a celebration where teams show off what they learned and invented, and in our oldest division, compete with their robots.</Typography>
                 <Typography> Some teams earn an invitation to FIRST LEGO League World Festival as part of FIRST Championship Houston or FIRST Championship Detroit, where teams from all over the world meet and compete.</Typography>
-                <CustomButton>Get Started</CustomButton>
+                <CustomButton bold>Get Started</CustomButton>
             </Grid>
         </Grid>
     )

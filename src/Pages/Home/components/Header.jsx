@@ -36,9 +36,8 @@ const Header = () => {
                     ))}
                 </Typography>
                 <Stack>
-                    <CustomButton isLarge stlyes={{ width: 190, gap: 2 }} >Get Started <FaArrowRightLong /></CustomButton>
+                    <CustomButton isLarge >Get Started <FaArrowRightLong /></CustomButton>
                 </Stack>
-
                 <ImgSlider />
             </Stack>
         </Box>

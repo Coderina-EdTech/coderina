@@ -8,7 +8,7 @@ const LegoHeader = () => {
         <Box className="lego__header">
             <Stack>
                 <Typography variant='h4'>Engaging Youth in STEM Exploration with FIRST® LEGO® League</Typography>
-                <CustomButton>Get Started</CustomButton>
+                <CustomButton isLarge>Get Started</CustomButton>
             </Stack>
             <Stack>
                 <ReactPlayer width={"100%"} height={"100%"} url={"https://youtu.be/i52coAkhX8g"} />

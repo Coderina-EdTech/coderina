@@ -2,7 +2,7 @@ import { Box, Card, CardContent, CardMedia, Stack, Typography } from '@mui/mater
 import React from 'react'
 import Grid from '@mui/material/Grid2';
 import CustomButton from './CustomButton'
-import { FaArrowRightLong } from "react-icons/fa6";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import newsImg1 from "../../../assets/newsImg1.png"
 import newsImg2 from "../../../assets/newsImg2.png"
 import newsImg3 from "../../../assets/newsImg3.png"
@@ -44,7 +44,7 @@ const News = () => {
             <Stack className="news__header">
                 <Stack>
                     <Typography variant='h6'>News & Updates</Typography>
-                    <CustomButton orange >View all <FaArrowRightLong /></CustomButton>
+                    <CustomButton orange bold >View all <HiOutlineArrowNarrowRight size={18} /></CustomButton>
                 </Stack>
                 <Grid container className="news__cards">
                     {newsCard.map((cardInfo, i) => (
@@ -65,7 +65,7 @@ const News = () => {
                         </Stack>
                         <Stack>
                             <CustomButton>Book Space</CustomButton>
-                            <CustomButton orange>Book STEAM Classes</CustomButton>
+                            <CustomButton orange bold>Book STEAM Classes</CustomButton>
                         </Stack>
                     </Grid>
                     <Grid size={{ xs: 12, md: 5 }}>

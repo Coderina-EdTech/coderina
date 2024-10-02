@@ -13,7 +13,8 @@ const Experience = () => {
             text: ["Looking for something different to celebrate your child's birthday? Coderina provides a totally unique party experience with interactive elements that really engage the kids."],
             textType: "span",
             button: "Contact us",
-            buttonType: "orange",
+            buttonType: true,
+            weight: true,
             color: pinkBgR,
             image: expCard1
         },
@@ -47,7 +48,7 @@ const Experience = () => {
                                         <Typography component={card.textType} key={i}>{t}</Typography>
                                     ))}
                                 </Stack>
-                                <CustomButton orange={card.buttonType}>{card.button}</CustomButton>
+                                <CustomButton orange={card.buttonType} bold={card.weight}>{card.button}</CustomButton>
                             </Stack>
                             <Card>
                                 <CardMedia component="img" image={card.image} />

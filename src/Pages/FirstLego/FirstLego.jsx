@@ -37,9 +37,6 @@ const FirstLego = () => {
             section: <LegoCard3 />
         },
         {
-            section: <Resources />
-        },
-        {
             section: <Partners sponsor />
         },
         {

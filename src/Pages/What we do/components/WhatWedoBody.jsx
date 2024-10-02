@@ -10,11 +10,13 @@ const WhatWedoBody = () => {
     const programs = [
         {
             title: "Coderina Project Fair",
-            description: "This is a 48-hour event promoting innovation among tertiary students in Nigeria. Teams from diverse backgrounds collaborate to solve indigenous problems using technology or modern business approaches."
+            description: "This is a 48-hour event promoting innovation among tertiary students in Nigeria. Teams from diverse backgrounds collaborate to solve indigenous problems using technology or modern business approaches.",
+            link: ""
         },
         {
             title: "Coderina® University Challenge (COUCH)",
-            description: "TThis is an annual event where tertiary students showcase their final year projects to industry experts. The goal is to bridge the gap between academic work and industry needs, aligning student projects with real-world requirements."
+            description: "This is an annual event where tertiary students showcase their final year projects to industry experts. The goal is to bridge the gap between academic work and industry needs, aligning student projects with real-world requirements.",
+            link: "/couch"
         }
     ]
 
@@ -45,11 +47,11 @@ const WhatWedoBody = () => {
             <Stack>
                 <Paper elevation={1} className='what__paper'>Other Programs</Paper>
                 <Grid container>
-                    {programs.map(({ title, description }, i) => (
+                    {programs.map(({ title, description, link }, i) => (
                         <Grid key={title} size={{ xs: 12, md: 5.9 }}>
                             <Typography variant='h6'>{title}</Typography>
                             <Typography>{description}</Typography>
-                            <Link>Learn More <FaArrowRightLong /></Link>
+                            <Link to={link}>Learn More <FaArrowRightLong /></Link>
                         </Grid>
                     ))}
                 </Grid>
