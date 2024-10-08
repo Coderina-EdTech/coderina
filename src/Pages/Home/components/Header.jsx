@@ -30,7 +30,7 @@ const Header = () => {
             <Stack gap={3}>
                 <Typography className='header__tags'>
                     {tags.map(({ tag, color }) => (
-                        <Typography component={"span"} key={tag} color={color}>
+                        <Typography fontSize={{ xs: "34px", md: "64px" }} component={"span"} key={tag} color={color}>
                             {tag}
                         </Typography>
                     ))}

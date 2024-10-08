@@ -19,7 +19,7 @@ const Footer = () => {
         {
             title: "Address",
             content: [
-                <><RiMapPin3Fill color={redColor} /> 4 Ngozi Okonjo Iweala way, Utako district Abuja</>,
+                <><RiMapPin3Fill color={redColor} /> 4 Ngozi Okonjo Iweala way, Utako district</>,
                 <><RiMapPin3Fill color={redColor} /> 4 Oye Balogun St, Lekki Penninsula II, Lekki Lagos</>,
                 <><TbClockHour3Filled color={yellowColor} /> Mon - Fri 9.00 - 5.00</>,
             ]
@@ -42,20 +42,25 @@ const Footer = () => {
             <Stack className="footer__container">
                 <Stack>
                     <Stack className="footer__icons">
-                        <img src={Logo} alt="Coderina Logo" />
+                        <Box component={"img"} width={{ xs: "130px", md: "230px" }} src={Logo} alt="Coderina Logo" />
                         <Stack>
                             {footerIcons.map((icon) => (
-                                <IconButton key={icon}>{icon}</IconButton>
+                                <IconButton key={icon}
+                                    sx={{
+                                        width: { xs: "27px", md: "35px" },
+                                        height: { xs: "27px", md: "35px" }
+                                    }}
+                                >{icon}</IconButton>
                             ))}
                         </Stack>
                     </Stack>
-                    <Stack>
+                    <Stack gap={{ xs: "1em", md: "5em" }}>
                         {footerInfo.map((icon, i) => (
                             <Stack key={i} className="footer__info">
-                                <Typography variant="h6">{icon.title}</Typography>
+                                <Typography variant="h6" fontSize={{ xs: "10px", md: "14px" }}>{icon.title}</Typography>
                                 <Stack>
                                     {Object.values(icon.content).map((content) => (
-                                        <Typography key={content}>{content}</Typography>
+                                        <Typography fontSize={{ xs: "10px", md: "14px" }} key={content}>{content}</Typography>
                                     ))}
                                 </Stack>
                             </Stack>
@@ -65,10 +70,10 @@ const Footer = () => {
             </Stack>
             <Stack className='footer__copyright'>
                 <Stack>
-                    <Typography>Coderina - Copyright 2022</Typography>
+                    <Typography fontSize={{ xs: "12px", md: "14.5px" }}>Coderina - Copyright 2022</Typography>
                     <Stack>
                         {footerRights.map((text) => (
-                            <Typography key={text}>{text}</Typography>
+                            <Typography fontSize={{ xs: "12px", md: "14.5px" }} key={text}>{text}</Typography>
                         ))}
                     </Stack>
                 </Stack>

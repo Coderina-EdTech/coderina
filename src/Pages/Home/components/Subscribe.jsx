@@ -14,8 +14,8 @@ const Subscribe = ({ register, link }) => {
     )
     else return (
         <Grid container className="partner__signup" p={5}>
-            <Grid size={{ xs: 12, md: 4.8 }}>
-                <Typography variant='h4'>Sign up for our Newsletter to receive news and updates.</Typography>
+            <Grid size={{ xs: 12, md: 4 }}>
+                <Typography variant='h4' fontSize={{ xs: "20px", md: "28px" }}>Sign up for our Newsletter to receive news and updates.</Typography>
             </Grid>
             <Grid size={{ xs: 12, md: 4.8 }}>
                 <form action="submit">

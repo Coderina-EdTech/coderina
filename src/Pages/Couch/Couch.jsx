@@ -1,6 +1,6 @@
 import React from 'react'
 import { blackColor, pinkBg } from '../../utils/constants'
-import { Box, Container, Stack, Typography } from '@mui/material'
+import { Box, Card, Container, Stack, Typography } from '@mui/material'
 import CustomButton from '../Home/components/CustomButton'
 import Subscribe from '../Home/components/Subscribe'
 import Footer from '../Home/components/Footer'

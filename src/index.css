@@ -95,11 +95,11 @@ a {
 }
 
 .header__tags {
-  width: 60%;
+  width: 65%;
 
   span {
     font-family: var(--fontStyle);
-    font-size: 64px;
+    /* font-size: 64px; */
     font-weight: 600;
   }
 }
@@ -113,7 +113,7 @@ a {
   }
 
   img {
-    width: 270px;
+    /* width: 270px; */
   }
 }
 
@@ -144,13 +144,15 @@ a {
   flex-direction: row !important;
   justify-content: space-between;
   align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1em;
 
   h5 {
     font-family: var(--fontStyle);
     font-weight: 500;
-    font-size: 32px;
+    /* font-size: 32px; */
     line-height: 48px;
-    width: 70%;
+    /* width: 70%; */
   }
 }
 
@@ -495,6 +497,7 @@ a {
   border-radius: 1em;
   padding: 2em;
 
+
   img {
     width: 100%;
   }
@@ -514,6 +517,7 @@ a {
 
   >div {
     justify-content: space-between;
+    gap: 2em;
 
     >div:first-child {
       display: flex;
@@ -558,14 +562,14 @@ a {
 
   img {
     height: 35px;
-    /* border: 1px solid red; */
   }
 
   >div:first-child {
-    gap: 3em !important;
-    justify-content: space-between !important;
+    /* gap: 3em !important; */
+    justify-content: space-evenly;
 
     div {
+      /* border: 1px solid red; */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -587,9 +591,10 @@ a {
   align-items: center;
   margin-bottom: 2em;
   border-radius: 1em;
+  gap: 1em !important;
 
   h4 {
-    font-size: 28px;
+    /* font-size: 28px; */
     font-weight: 700;
     font-family: var(--fontStyle);
   }
@@ -629,7 +634,7 @@ a {
 
     >div:last-child {
       flex-direction: row;
-      gap: 5em;
+      /* gap: 5em; */
     }
   }
 }
@@ -639,14 +644,14 @@ a {
   gap: 2em;
 
   img {
-    width: 230px;
+    /* width: 230px; */
   }
 
   button {
-    background: #2C2B2B;
+    background: var(--yellowColor);
 
     svg {
-      color: #FFFFFF;
+      color: var(--blackBg);
       font-size: 18px;
     }
   }
@@ -672,7 +677,7 @@ a {
   h6,
   p {
     font-family: var(--fontStyle1);
-    font-size: 14px;
+    /* font-size: 14px; */
     display: flex;
     gap: 0.5em;
     align-items: center;
@@ -685,7 +690,7 @@ a {
   padding: 1.5em 0 0;
 
   p {
-    font-size: 14.5px;
+    /* font-size: 14.5px; */
     font-weight: 300;
     font-family: var(--fontStyle1);
     color: rgba(255, 255, 255, 0.7);

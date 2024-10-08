@@ -24,7 +24,7 @@ const AboutSection = () => {
         <Box className="sec__container">
             <Stack className='aboutSec__container'>
                 <Stack className='aboutSec__header'>
-                    <Typography variant='h5'>Coderina is an independent Non-profit organisation Ed-Tech that works to promote ICT development, Youth Innovation and Entrepreneurship in Africa</Typography>
+                    <Typography variant='h5' fontSize={{ xs: "22px", md: "32px" }} width={{ xs: "100%", md: "70%" }}>Coderina is an independent Non-profit organisation Ed-Tech that works to promote ICT development, Youth Innovation and Entrepreneurship in Africa</Typography>
                     <CustomButton>Learn About Us</CustomButton>
                 </Stack>
                 <Grid container className="aboutSec__grid">

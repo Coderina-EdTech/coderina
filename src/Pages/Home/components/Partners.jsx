@@ -42,9 +42,9 @@ const Partners = ({ sponsor }) => {
         <Box className="partner__container sec__container">
             <Typography variant='h6'>Our Partners</Typography>
             <Stack className='partner__card'>
-                <Grid container>
+                <Grid container gap={{ xs: "1em", md: "3em" }}>
                     {partnerLogos.map((logo) => (
-                        <Grid key={logo} size={{ xs: 12, md: 1.6 }}>
+                        <Grid key={logo} size={{ xs: 12, sm: 4, md: 1.6 }}>
                             <img src={logo} alt="Partner logo" />
                         </Grid>
                     ))}

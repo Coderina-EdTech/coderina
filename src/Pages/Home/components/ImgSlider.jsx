@@ -38,7 +38,7 @@ const ImgSlider = () => {
             <Slider className='header__carousel' {...settings}>
                 {slideImg.map((slide, index) => (
                     <Stack key={index}>
-                        <Box component={"img"} src={slide.image} alt="" />
+                        <Box width={{ xs: "145px", md: "270px" }} component={"img"} src={slide.image} alt="" />
                     </Stack>
                 ))}
             </Slider>

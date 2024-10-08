@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, CardMedia, Stack, Typography } from '@mui/material'
+import { Box, CardContent, CardMedia, Stack, Typography } from '@mui/material'
 import React from 'react'
 import Grid from '@mui/material/Grid2';
 import CustomButton from './CustomButton'
