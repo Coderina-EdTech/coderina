@@ -46,7 +46,7 @@ const Couch = () => {
         <Box className="couch__container">
             <Box p={4} bgcolor={pinkBg} >
                 <Container maxWidth="xl" className="couch__header">
-                    <Stack>
+                    <Stack p={{ xs: "4em 8em", md: "6.5em 14em" }}>
                         <Typography variant='h4'>Coderina® University Challenge (COUCH)</Typography>
                         <Typography>A 48 hours Challenge where teams of students with diverse background and skill set come together to solve “indigenous” problems using technology or modern business approaches. </Typography>
                         <CustomButton isLarge>Get Started</CustomButton>

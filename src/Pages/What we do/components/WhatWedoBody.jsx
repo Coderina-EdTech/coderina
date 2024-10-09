@@ -38,8 +38,8 @@ const WhatWedoBody = () => {
         <Box mt={10} className="what__container">
             <Stack>
                 <Stack>
-                    <Typography variant='h4'>FIRST LEGO League Programs</Typography>
-                    <Typography>FIRST® LEGO® League introduces youth to STEM through hands-on learning and competition. From Discover to Challenge, students build STEM skills while developing confidence, teamwork, and lifelong learning habits.</Typography>
+                    <Typography variant='h4' width={{ xs: "100%", md: "25%" }}>FIRST LEGO League Programs</Typography>
+                    <Typography width={{ xs: "100%", md: "57%" }}>FIRST® LEGO® League introduces youth to STEM through hands-on learning and competition. From Discover to Challenge, students build STEM skills while developing confidence, teamwork, and lifelong learning habits.</Typography>
                     <CustomButton>Get Started <FaArrowRightLong /></CustomButton>
                 </Stack>
                 <CardMedia component={"img"} image={leagueImg} />

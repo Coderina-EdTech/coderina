@@ -29,12 +29,12 @@ const LegoPrograms = () => {
 
     return (
         <Box className="lego__program">
-            <Typography variant='h4'>FIRST LEGO League Programs</Typography>
+            <Typography variant='h4' fontSize={{ xs: "24px", md: "36px" }}>FIRST LEGO League Programs</Typography>
             <Grid container>
                 {legoLeagues.map((league, i) => (
-                    <Grid key={i} size={{ xs: 12, md: 2.85 }}>
+                    <Grid key={i} size={{ xs: 12, sm: 5.8, md: 2.85 }}>
                         <Stack>
-                            <img src={league.img} alt="" />
+                            <Box component={"img"} src={league.img} alt="" />
                             <Typography>{league.description}</Typography>
                         </Stack>
                     </Grid>

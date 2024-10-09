@@ -69,7 +69,7 @@ const CoreValues = () => {
             <Card className="cv__container">
                 {coreValues.map((cv, i) => (
                     <CardContent key={i}>
-                        <Stack>
+                        <Stack width={{ xs: "100%", md: "30%" }}>
                             <Typography variant='h3'>{cv.title}</Typography>
                         </Stack>
                         <Stack className='core__values'>

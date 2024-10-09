@@ -32,21 +32,21 @@ const Resources = () => {
 
     return (
         <Box className="resource__container">
-            <Typography variant='h4'>Resources</Typography>
+            <Typography variant='h4' fontSize={{ xs: "22px", md: "28px" }}>Resources</Typography>
             <Stack>
                 {cardContent.map((content, i) => (
                     <Stack key={i} gap={content.gap}>
                         <Stack>
                             <img src={content.img} alt="" />
-                            <Typography>{content.description}</Typography>
+                            <Typography fontSize={{ xs: "14px", md: "18px" }}>{content.description}</Typography>
                         </Stack>
                         <Stack>
-                            <Link>{content.link}<BsArrowRight size={23} /></Link>
+                            <Link><Box fontSize={{ xs: "12px", md: "17px" }} component={"span"}>{content.link}</Box><BsArrowRight size={23} /></Link>
                         </Stack>
                     </Stack>
                 ))}
             </Stack>
-        </Box>
+        </Box >
     )
 }
 

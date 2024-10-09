@@ -76,11 +76,16 @@ const ImpactSlider = ({ lego }) => {
             <Box overflow={"hidden"} className='impact__carousel' >
                 <Slider {...settings} slidesToShow={4}>
                     {legoImpact.map((slide, index) => (
-                        <CardContent key={index} className='impact__card' sx={{ bgcolor: "#FFF9F0", borderRight: "1px solid #E69F22" }}>
-                            <img src={slide.img} alt="" />
+                        <CardContent key={index} className='impact__card'
+                            sx={{
+                                bgcolor: "#FFF9F0",
+                                borderRight: "1px solid #E69F22",
+                                height: { xs: "26vh", md: "34vh" }
+                            }}>
+                            <Box width={{ xs: "12px", md: "24px" }} component={"img"} src={slide.img} alt="" />
                             <Stack>
-                                <Typography variant='h4'>{slide.number}</Typography>
-                                <Typography>{slide.text}</Typography>
+                                <Typography variant='h4' fontSize={{ xs: "20px", md: "50px" }}>{slide.number}</Typography>
+                                <Typography fontSize={{ xs: "15px", md: "16px" }}>{slide.text}</Typography>
                             </Stack>
                         </CardContent>
                     ))}
@@ -92,11 +97,16 @@ const ImpactSlider = ({ lego }) => {
         <Box overflow={"hidden"} className='impact__carousel' border={"1px solid #14B96C"} >
             <Slider {...settings} slidesToShow={5}>
                 {impactNums.map((slide, index) => (
-                    <CardContent key={index} className='impact__card' sx={{ bgcolor: "#ADF7D4", borderRight: "1px solid #14B96C" }}>
-                        <img src={slide.img} alt="" />
+                    <CardContent key={index} className='impact__card'
+                        sx={{
+                            bgcolor: "#ADF7D4",
+                            borderRight: "1px solid #14B96C",
+                            height: { xs: "26vh", md: "34vh" },
+                        }}>
+                        <Box width={{ xs: "12px", md: "24px" }} component={"img"} src={slide.img} alt="" />
                         <Stack>
-                            <Typography variant='h4'>{slide.number}</Typography>
-                            <Typography>{slide.text}</Typography>
+                            <Typography variant='h4' fontSize={{ xs: "20px", md: "50px" }}>{slide.number}</Typography>
+                            <Typography fontSize={{ xs: "10px", md: "16px" }}>{slide.text}</Typography>
                         </Stack>
                     </CardContent>
                 ))}

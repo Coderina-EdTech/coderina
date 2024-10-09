@@ -726,11 +726,11 @@ a {
   margin-top: 5em;
 
   h4 {
-    font-size: 35px;
+    /* font-size: 35px; */
   }
 
   p {
-    font-size: 21px;
+    /* font-size: 21px; */
     font-weight: 400;
     color: #4C6168;
   }
@@ -739,7 +739,7 @@ a {
     border-radius: 2em;
     text-transform: none;
     font-family: var(--fontStyle1);
-    font-size: 14px;
+    /* font-size: 14px; */
   }
 
   div {
@@ -779,34 +779,29 @@ a {
   flex-direction: column;
   gap: 3em;
   margin: 2em 0;
-
-  h4 {
-    font-size: 40px;
-  }
 }
 
 .impact__carousel {
-  /* border: 1px solid #14B96C; */
   border-radius: 1em;
 }
 
 .impact__card {
   /* background: #ADF7D4; */
   /* border-right: 1px solid #14B96C; */
-  height: 34vh;
+  /* height: 34vh; */
 
 
   h4 {
-    font-size: 50px;
+    /* font-size: 50px; */
   }
 
   p {
-    font-size: 16px;
+    /* font-size: 16px; */
     font-weight: 500;
   }
 
   img {
-    width: 24px;
+    /* width: 24px; */
     margin: 0 0 2em;
   }
 
@@ -822,7 +817,7 @@ a {
   margin: 2em 0;
 
   p {
-    font-size: 28px;
+    /* font-size: 28px; */
     font-weight: 400;
   }
 
@@ -882,10 +877,8 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-    >div:first-child {
-      width: 30%;
-    }
+    flex-wrap: wrap;
+    gap: 2em;
   }
 }
 
@@ -956,7 +949,6 @@ a {
     font-size: 29px;
     font-weight: 700;
     font-family: var(--fontStyle);
-    width: 25%;
   }
 
   p {
@@ -987,7 +979,6 @@ a {
 
     p {
       color: #4C6168;
-      width: 57%;
     }
 
     div {
@@ -1015,6 +1006,7 @@ a {
 
     >div:last-child {
       justify-content: space-between;
+      gap: 1em;
 
       div {
         display: flex;
@@ -1032,6 +1024,7 @@ a {
 
     >div {
       justify-content: space-between;
+      gap: 1em;
 
       >div {
         padding: 1.5em;
@@ -1236,7 +1229,7 @@ a {
   gap: 3em;
 
   h4 {
-    width: 60%;
+    /* width: 60%; */
     font-size: 27px;
   }
 
@@ -1258,14 +1251,7 @@ a {
 .lego__card {
   justify-content: space-between;
   margin: 2em 0;
-
-  h4 {
-    font-size: 36px;
-  }
-
-  p {
-    font-size: 17px;
-  }
+  gap: 1em !important;
 
   img {
     width: 100%;
@@ -1282,6 +1268,7 @@ a {
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
+    gap: 1em;
   }
 }
 
@@ -1300,6 +1287,7 @@ a {
 
   >div {
     justify-content: space-between;
+    gap: 1em;
 
     >div {
       div {
@@ -1327,11 +1315,11 @@ a {
   gap: 2em;
 
   p {
-    font-size: 18px;
+    /* font-size: 18px; */
   }
 
   h4 {
-    font-size: 28px;
+    /* font-size: 28px; */
   }
 
   img {
@@ -1346,9 +1334,9 @@ a {
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 17px;
+      /* font-size: 17px; */
       font-weight: 500;
-      gap: .5em;
+      gap: .2em;
       letter-spacing: -1px;
     }
 
@@ -1402,7 +1390,7 @@ a {
   >div:first-child {
     margin: 8em 0;
     background: var(--pinkBgR);
-    padding: 6.5em 14em;
+    /* padding: 6.5em 14em; */
     justify-content: center;
     align-items: center;
     text-align: center;

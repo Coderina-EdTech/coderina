@@ -7,7 +7,7 @@ const LegoHeader = () => {
     return (
         <Box className="lego__header">
             <Stack>
-                <Typography variant='h4'>Engaging Youth in STEM Exploration with FIRST® LEGO® League</Typography>
+                <Typography variant='h4' width={{ xs: "100%", md: "60%" }}>Engaging Youth in STEM Exploration with FIRST® LEGO® League</Typography>
                 <CustomButton isLarge>Get Started</CustomButton>
             </Stack>
             <Stack>
