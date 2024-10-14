@@ -706,12 +706,7 @@ a {
 .about__header {
   margin-top: 5em;
 
-  h4 {
-    /* font-size: 35px; */
-  }
-
   p {
-    /* font-size: 21px; */
     font-weight: 400;
     color: #4C6168;
   }
@@ -767,22 +762,12 @@ a {
 }
 
 .impact__card {
-  /* background: #ADF7D4; */
-  /* border-right: 1px solid #14B96C; */
-  /* height: 34vh; */
-
-
-  h4 {
-    /* font-size: 50px; */
-  }
 
   p {
-    /* font-size: 16px; */
     font-weight: 500;
   }
 
   img {
-    /* width: 24px; */
     margin: 0 0 2em;
   }
 
@@ -1296,14 +1281,6 @@ a {
   display: flex;
   flex-direction: column;
   gap: 2em;
-
-  p {
-    /* font-size: 18px; */
-  }
-
-  h4 {
-    /* font-size: 28px; */
-  }
 
   img {
     height: 18px;
