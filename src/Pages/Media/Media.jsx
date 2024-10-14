@@ -22,7 +22,7 @@ const Media = () => {
     ]
 
     return (
-        <>
+        <Box overflow={"hidden"}>
             {eventContent.map(({ color, section }) => (
                 <Box p={4} key={section} bgcolor={color}>
                     <Container maxWidth="xl">
@@ -30,7 +30,7 @@ const Media = () => {
                     </Container>
                 </Box>
             ))}
-        </>
+        </Box>
     )
 }
 

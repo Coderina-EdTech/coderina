@@ -9,10 +9,10 @@ const SolutionCards = ({ img, text, childern, childern1, childern2 }) => {
             <Card sx={{ borderRadius: {} }}>
                 <CardMedia component={"img"} image={img} width={"320px"} />
             </Card>
-            <Typography>{childern}</Typography>
-            <Typography>{childern1}</Typography>
-            <Typography>{text}</Typography>
-            <Typography>{childern2}</Typography>
+            <Typography fontSize={{ xs: "12px", md: "14px" }}>{childern}</Typography>
+            <Typography fontSize={{ xs: "12px", md: "14px" }}>{childern1}</Typography>
+            <Typography fontSize={{ xs: "16px", md: "18px" }}>{text}</Typography>
+            <Typography fontSize={{ xs: "12px", md: "14px" }}>{childern2}</Typography>
         </Grid>
     )
 }

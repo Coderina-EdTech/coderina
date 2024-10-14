@@ -20,10 +20,10 @@ const Upcoming = () => {
     return (
         <Box className="upcomingSec__Container sec__container">
             <Stack className='upcomingSec__header'>
-                <Typography variant="h5">Upcoming Events</Typography>
+                <Typography variant="h5" fontSize={{ xs: "22px", md: "32px" }}>Upcoming Events</Typography>
                 <Stack>
-                    <IconButton onClick={previous}><RiArrowLeftLine /></IconButton>
-                    <IconButton onClick={next}><RiArrowRightLine /></IconButton>
+                    <IconButton sx={{ padding: { xs: "default", md: "12px" } }} onClick={previous}><RiArrowLeftLine /></IconButton>
+                    <IconButton sx={{ padding: { xs: "default", md: "12px" } }} onClick={next}><RiArrowRightLine /></IconButton>
                 </Stack>
             </Stack>
             <UpSlider

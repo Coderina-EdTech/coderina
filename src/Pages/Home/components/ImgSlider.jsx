@@ -31,6 +31,23 @@ const ImgSlider = () => {
         slidesToShow: 4,
         slidesToScroll: 1,
         autoplay: true,
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 300,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     }
 
     return (
@@ -38,7 +55,7 @@ const ImgSlider = () => {
             <Slider className='header__carousel' {...settings}>
                 {slideImg.map((slide, index) => (
                     <Stack key={index}>
-                        <Box width={{ xs: "145px", md: "270px" }} component={"img"} src={slide.image} alt="" />
+                        <Box width={{ xs: "100%", md: "255px" }} component={"img"} src={slide.image} alt="" />
                     </Stack>
                 ))}
             </Slider>

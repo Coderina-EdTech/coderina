@@ -41,7 +41,7 @@ const Footer = () => {
         <Box className="footer__card sec__container">
             <Stack className="footer__container">
                 <Stack>
-                    <Stack className="footer__icons">
+                    <Stack className="footer__icons" direction={{ xs: "row", md: "column" }}>
                         <Box component={"img"} width={{ xs: "130px", md: "230px" }} src={Logo} alt="Coderina Logo" />
                         <Stack>
                             {footerIcons.map((icon) => (
@@ -70,10 +70,10 @@ const Footer = () => {
             </Stack>
             <Stack className='footer__copyright'>
                 <Stack>
-                    <Typography fontSize={{ xs: "12px", md: "14.5px" }}>Coderina - Copyright 2022</Typography>
-                    <Stack>
+                    <Typography fontSize={{ xs: "5px", md: "14.5px" }}>Coderina - Copyright 2022</Typography>
+                    <Stack gap={{ xs: 1, md: 4 }}>
                         {footerRights.map((text) => (
-                            <Typography fontSize={{ xs: "12px", md: "14.5px" }} key={text}>{text}</Typography>
+                            <Typography fontSize={{ xs: "5px", md: "14.5px" }} key={text}>{text}</Typography>
                         ))}
                     </Stack>
                 </Stack>

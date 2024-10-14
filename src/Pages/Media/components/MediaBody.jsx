@@ -114,13 +114,14 @@ const MediaBody = () => {
 
     return (
         <Box mt={13} className='media__container'>
-            <Stack>
+            <Stack justifyContent={["center", "space-between"]}>
                 <Typography variant='h4'>Media</Typography>
                 <Stack>
                     {mediaBtn.map((btn, i) => (
                         <Button key={i} variant={mediaOption == btn ? "contained" : ""}
                             sx={{
-                                bgcolor: mediaOption == btn ? "White" : ""
+                                bgcolor: mediaOption == btn ? "White" : "",
+                                fontSize: { xs: "12px", md: "14px" }
                             }}
                             onClick={() => {
                                 setMediaOption(btn)

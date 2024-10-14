@@ -70,22 +70,22 @@ const CoreValues = () => {
                 {coreValues.map((cv, i) => (
                     <CardContent key={i}>
                         <Stack width={{ xs: "100%", md: "30%" }}>
-                            <Typography variant='h3'>{cv.title}</Typography>
+                            <Typography variant='h3' fontSize={{ xs: "30px", md: "40px" }}>{cv.title}</Typography>
                         </Stack>
                         <Stack className='core__values'>
-                            <Stack>
+                            <Stack gap={{ xs: ".5em", md: "1em" }}>
                                 {cv.value1.map((v) => (
-                                    <Paper key={v} sx={{ bgcolor: v.bgColor }}><Typography color={v.color}>{v.text}</Typography></Paper>
+                                    <Paper key={v} sx={{ bgcolor: v.bgColor }}><Typography fontSize={{ xs: "6px", md: "17px" }} color={v.color}>{v.text}</Typography></Paper>
                                 ))}
                             </Stack>
-                            <Stack>
+                            <Stack gap={{ xs: ".5em", md: "1em" }}>
                                 {cv.value2.map((v) => (
-                                    <Paper key={v} sx={{ bgcolor: v.bgColor }}><Typography color={v.color}>{v.text}</Typography></Paper>
+                                    <Paper key={v} sx={{ bgcolor: v.bgColor }}><Typography fontSize={{ xs: "6px", md: "17px" }} color={v.color}>{v.text}</Typography></Paper>
                                 ))}
                             </Stack>
-                            <Stack>
+                            <Stack gap={{ xs: ".5em", md: "1em" }}>
                                 {cv.value3.map((v) => (
-                                    <Paper key={v} sx={{ bgcolor: v.bgColor }}><Typography color={v.color}>{v.text}</Typography></Paper>
+                                    <Paper key={v} sx={{ bgcolor: v.bgColor }}><Typography fontSize={{ xs: "6px", md: "17px" }} color={v.color}>{v.text}</Typography></Paper>
                                 ))}
                             </Stack>
                         </Stack>

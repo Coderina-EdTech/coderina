@@ -13,7 +13,7 @@ const Activity = () => {
 
     return (
         <Box className="activity__container sec__container">
-            <Typography variant='h5'>Our Programs, Projects and Initiatives</Typography>
+            <Typography variant='h5' fontSize={{ xs: "20px", md: "40px" }}>Our Programs, Projects and Initiatives</Typography>
             <Stack>
                 <Grid container className="activity__cards">
                     <Grid size={{ xs: 12, sm: 5.8, md: 5.9 }} className='activity__grid'>
@@ -27,7 +27,7 @@ const Activity = () => {
                                 <Stack gap={2}>
                                     <Typography variant='h6'>Projects</Typography>
                                     {textContent1.map((text1) => (
-                                        <Typography key={text1}>{text1}</Typography>
+                                        <Typography fontSize={{ xs: "18px", md: "20px" }} key={text1}>{text1}</Typography>
                                     ))}
                                 </Stack>
                             </CardContent>
@@ -39,7 +39,7 @@ const Activity = () => {
                                 <Stack gap={2}>
                                     <Typography variant='h6'>Other Programs</Typography>
                                     {textContent2.map((text2) => (
-                                        <Typography key={text2}>{text2}</Typography>
+                                        <Typography fontSize={{ xs: "18px", md: "20px" }} key={text2}>{text2}</Typography>
                                     ))}
                                 </Stack>
                             </CardContent>
@@ -49,7 +49,7 @@ const Activity = () => {
                                 <Stack gap={1}>
                                     <Typography variant='h6'>Initiatives</Typography>
                                     {textContent3.map((text3) => (
-                                        <Typography key={text3}>{text3}</Typography>
+                                        <Typography fontSize={{ xs: "18px", md: "20px" }} key={text3}>{text3}</Typography>
                                     ))}
                                 </Stack>
                                 <Link>See other iniatives <FaArrowRightLong /></Link>

@@ -46,23 +46,23 @@ const Couch = () => {
         <Box className="couch__container">
             <Box p={4} bgcolor={pinkBg} >
                 <Container maxWidth="xl" className="couch__header">
-                    <Stack p={{ xs: "4em 8em", md: "6.5em 14em" }}>
-                        <Typography variant='h4'>Coderina® University Challenge (COUCH)</Typography>
-                        <Typography>A 48 hours Challenge where teams of students with diverse background and skill set come together to solve “indigenous” problems using technology or modern business approaches. </Typography>
+                    <Stack p={{ xs: "4em 1em", md: "6.5em 14em" }}>
+                        <Typography variant='h4' fontSize={{ xs: "18px", md: "27px" }}>Coderina® University Challenge (COUCH)</Typography>
+                        <Typography fontSize={{ xs: "14px", md: "16px" }}>A 48 hours Challenge where teams of students with diverse background and skill set come together to solve “indigenous” problems using technology or modern business approaches. </Typography>
                         <CustomButton isLarge>Get Started</CustomButton>
                     </Stack>
                 </Container>
             </Box>
             <Box mt={15} mb={10}>
-                <Container maxWidth="md" className='couch__info'>
+                <Container maxWidth="md" className='couch__info' sx={{ padding: { xs: "", md: "0 5em" } }}>
                     {couchInfos.map((info, i) => (
                         <Stack key={i} boxShadow={info.shadows} borderRadius={4}>
-                            <Typography variant='h4'>{info.title}</Typography>
+                            <Typography variant=' h4' fontSize={{ xs: "16px", md: "20px" }} fontWeight={700}>{info.title}</Typography>
                             <Stack>
                                 {info.content.map((content) => (
                                     <Stack className='couch__text'>
                                         <Typography component={info.type}></Typography>
-                                        <Typography>{content}</Typography>
+                                        <Typography fontSize={{ xs: "14px", md: "16px" }}>{content}</Typography>
                                     </Stack>
                                 ))}
                             </Stack>

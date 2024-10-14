@@ -24,15 +24,15 @@ const AboutSection = () => {
         <Box className="sec__container">
             <Stack className='aboutSec__container'>
                 <Stack className='aboutSec__header'>
-                    <Typography variant='h5' fontSize={{ xs: "22px", md: "32px" }} width={{ xs: "100%", md: "70%" }}>Coderina is an independent Non-profit organisation Ed-Tech that works to promote ICT development, Youth Innovation and Entrepreneurship in Africa</Typography>
+                    <Typography variant='h5' fontSize={{ xs: "17px", md: "32px" }} width={{ xs: "100%", md: "70%" }}>Coderina is an independent Non-profit organisation Ed-Tech that works to promote ICT development, Youth Innovation and Entrepreneurship in Africa</Typography>
                     <CustomButton>Learn About Us</CustomButton>
                 </Stack>
                 <Grid container className="aboutSec__grid">
                     {aboutCard.map(({ title, description, img }) => (
                         <Grid size={{ xs: 12, md: 6 }} key={title}>
                             <Stack>
-                                <Typography>{title}</Typography>
-                                <Typography>{description}</Typography>
+                                <Typography fontSize={{ xs: "16px", md: "20px" }}>{title}</Typography>
+                                <Typography fontSize={{ xs: "16px", md: "20px" }}>{description}</Typography>
                             </Stack>
                             <img src={img} />
                         </Grid>

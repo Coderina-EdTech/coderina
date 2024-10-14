@@ -46,7 +46,7 @@ const Home = () => {
         }
     ]
     return (
-        <>
+        <Box overflow={"hidden"}>
             {homeContents1.map(({ color, section }) => (
                 <Box p={4} key={section} bgcolor={color}>
                     <Container maxWidth="xl">
@@ -64,7 +64,7 @@ const Home = () => {
                     </Container>
                 </Box>
             ))}
-        </>
+        </Box>
     )
 }
 

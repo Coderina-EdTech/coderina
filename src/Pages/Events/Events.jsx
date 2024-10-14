@@ -22,7 +22,7 @@ const Events = () => {
     ]
 
     return (
-        <>
+        <Box overflow={"hidden"}>
             {eventContent.map(({ color, section }) => (
                 <Box p={4} key={section} bgcolor={color}>
                     <Container maxWidth="xl">
@@ -30,7 +30,7 @@ const Events = () => {
                     </Container>
                 </Box>
             ))}
-        </>
+        </Box>
     )
 }
 

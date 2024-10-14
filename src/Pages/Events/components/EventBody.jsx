@@ -42,10 +42,10 @@ const EventBody = () => {
     return (
         <Box className="event__container">
             <Stack>
-                <Stack className='event__upcoming'>
+                <Stack className='event__upcoming' justifyContent={["center", "space-between"]}>
                     <Typography variant='h4'>Upcoming Events</Typography>
                     <form action="submit">
-                        <Input type='text' style={{ borderRadius: "2em" }} prefix={<FiSearch />} placeholder='Search for event' />
+                        <Input width={{ xs: "100%", md: "300px" }} type='text' style={{ borderRadius: "2em" }} prefix={<FiSearch />} placeholder='Search for event' />
                     </form>
                 </Stack>
                 <Grid container justifyContent={"space-between"} gap={2.2}>
@@ -57,12 +57,12 @@ const EventBody = () => {
                                         <Stack bgcolor={card.color}></Stack>
                                         <Stack>
                                             <Stack color={card.color}>
-                                                <Typography><AiOutlineCalendar />{card.date}</Typography>
-                                                <Typography><TbClockHour3 />{card.time}</Typography>
+                                                <Typography fontSize={{ xs: "12px", md: "14px" }}><AiOutlineCalendar />{card.date}</Typography>
+                                                <Typography fontSize={{ xs: "12px", md: "14px" }}><TbClockHour3 />{card.time}</Typography>
                                             </Stack>
                                             <Stack>
-                                                <Typography variant="h6">{card.title}</Typography>
-                                                <Typography>{card.location}</Typography>
+                                                <Typography variant="h6" fontSize={{ xs: "22px", md: "30px" }}>{card.title}</Typography>
+                                                <Typography fontSize={{ xs: "12px", md: "14px" }}>{card.location}</Typography>
                                             </Stack>
                                         </Stack>
                                     </Stack>
@@ -86,12 +86,12 @@ const EventBody = () => {
                                         <Stack bgcolor={card.color}></Stack>
                                         <Stack>
                                             <Stack color={card.color}>
-                                                <Typography><AiOutlineCalendar />{card.date}</Typography>
-                                                <Typography><TbClockHour3 />{card.time}</Typography>
+                                                <Typography fontSize={{ xs: "12px", md: "14px" }}><AiOutlineCalendar />{card.date}</Typography>
+                                                <Typography fontSize={{ xs: "12px", md: "14px" }}><TbClockHour3 />{card.time}</Typography>
                                             </Stack>
                                             <Stack>
-                                                <Typography variant="h6">{card.title}</Typography>
-                                                <Typography>{card.location}</Typography>
+                                                <Typography variant="h6" fontSize={{ xs: "22px", md: "30px" }}>{card.title}</Typography>
+                                                <Typography fontSize={{ xs: "12px", md: "14px" }}>{card.location}</Typography>
                                             </Stack>
                                         </Stack>
                                     </Stack>

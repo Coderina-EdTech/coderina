@@ -45,13 +45,13 @@ const WhatWedoBody = () => {
                 <CardMedia component={"img"} image={leagueImg} />
             </Stack>
             <Stack>
-                <Paper elevation={1} className='what__paper'>Other Programs</Paper>
+                <Paper elevation={1} className='what__paper' sx={{ fontSize: { xs: "12px", md: "14px" } }}>Other Programs</Paper>
                 <Grid container>
                     {programs.map(({ title, description, link }, i) => (
                         <Grid key={title} size={{ xs: 12, md: 5.9 }}>
-                            <Typography variant='h6'>{title}</Typography>
-                            <Typography>{description}</Typography>
-                            <Link to={link}>Learn More <FaArrowRightLong /></Link>
+                            <Typography variant='h6' fontSize={{ xs: "18px", md: "21px" }}>{title}</Typography>
+                            <Typography fontSize={{ xs: "14px", md: "16px" }}>{description}</Typography>
+                            <Link to={link}><Typography fontSize={{ xs: "10px", md: "16px" }}>Learn More <FaArrowRightLong /></Typography></Link>
                         </Grid>
                     ))}
                 </Grid>
@@ -60,16 +60,16 @@ const WhatWedoBody = () => {
                 <Grid container>
                     {activities.map((active, i) => (
                         <Grid key={i} size={{ xs: 12, md: active.md }}>
-                            <Paper elevation={1} className='what__paper'>{active.title}</Paper>
+                            <Paper elevation={1} className='what__paper' sx={{ fontSize: { xs: "10px", md: "14px" } }}>{active.title}</Paper>
                             <Stack>
                                 <Stack>
                                     {active.content.map((act) => (
-                                        <Typography>{act}</Typography>
+                                        <Typography fontSize={{ xs: "9px", md: "18px" }}>{act}</Typography>
                                     ))}
                                 </Stack>
                                 <Stack>
                                     {active.content2?.map((act2) => (
-                                        <Typography>{act2}</Typography>
+                                        <Typography fontSize={{ xs: "9px", md: "18px" }}>{act2}</Typography>
                                     ))}
                                 </Stack>
                             </Stack>

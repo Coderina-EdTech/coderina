@@ -30,7 +30,7 @@ const Scope = () => {
 
     return (
         <Box className="scope__container">
-            <Typography variant='h4'> Scope of our work</Typography>
+            <Typography variant='h4' fontSize={{ xs: "24px", md: "30px" }}> Scope of our work</Typography>
             <Grid container className="news__cards">
                 {scopeCards.map((scopeCard, i) => (
                     <SolutionCards key={i} {...scopeCard} />

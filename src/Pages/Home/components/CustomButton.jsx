@@ -11,11 +11,12 @@ const CustomButton = ({ children, orange, stlyes, bold, isLarge }) => {
         padding: isLarge ? ".9em 1.8em" : "",
         bgcolor: orange ? "#FBB12F" : "#201E1E",
         borderRadius: 10,
-        fontSize: "13px",
+        fontSize: { xs: "10px", md: "13px" },
         textTransform: "none",
         fontWeight: bold ? 600 : 300,
         color: orange ? "#080F12" : "#fff",
         fontFamily: fontStyle,
+        whiteSpace: "nowrap",
         gap: ".7em",
         ...stlyes
       }}

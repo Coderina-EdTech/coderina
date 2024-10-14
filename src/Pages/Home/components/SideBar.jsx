@@ -16,7 +16,7 @@ const SideBar = ({ isOpen, handleClose, Links }) => {
             }}
             PaperProps={{
                 sx: {
-                    maxWidth: 400,
+                    maxWidth: "50%",
                     width: "100%"
                 }
             }}

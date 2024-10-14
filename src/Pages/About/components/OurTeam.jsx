@@ -45,7 +45,7 @@ const OurTeam = () => {
     return (
         <Box className="team__container">
             <Stack>
-                <Typography variant='h4'>Our Team</Typography>
+                <Typography variant='h4' fontSize={{ xs: "20px", md: "30px" }}>Our Team</Typography>
                 <CustomButton>Volunteer with us <FaArrowRightLong /></CustomButton>
             </Stack>
             <Grid container className="news__cards">

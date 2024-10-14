@@ -22,7 +22,7 @@ const AboutMV = () => {
                     <Grid key={i} size={{ xs: 12, md: 5.8 }}>
                         <CardContent>
                             <Paper elevation={2}>{mv.item}</Paper>
-                            <Typography fontSize={{ xs: "20px", md: "28px" }}>{mv.detail}</Typography>
+                            <Typography fontSize={{ xs: "18px", md: "28px" }}>{mv.detail}</Typography>
                         </CardContent>
                     </Grid>
                 ))}

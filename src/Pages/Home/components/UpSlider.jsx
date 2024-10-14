@@ -54,7 +54,7 @@ const UpSlider = ({ slider }) => {
                                         <Typography><TbClockHour3 />{card.time}</Typography>
                                     </Stack>
                                     <Stack>
-                                        <Typography variant="h6">{card.title}</Typography>
+                                        <Typography variant="h6" fontSize={{ xs: "24px", md: "30px" }} >{card.title}</Typography>
                                         <Typography>{card.location}</Typography>
                                     </Stack>
                                 </Stack>

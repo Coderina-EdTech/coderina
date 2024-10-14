@@ -42,10 +42,10 @@ const Experience = () => {
                     <Grid key={i} bgcolor={card.color} size={{ xs: 12, md: 6 }}>
                         <Container maxWidth={"sm"} className='exp__card'>
                             <Stack>
-                                <Typography variant='h4'>{card.title}</Typography>
+                                <Typography variant='h4' fontSize={{ xs: "20px", md: "32px" }}>{card.title}</Typography>
                                 <Stack>
                                     {card.text.map((t, i) => (
-                                        <Typography component={card.textType} key={i}>{t}</Typography>
+                                        <Typography fontSize={{ xs: "14px", md: "18px" }} component={card.textType} key={i}>{t}</Typography>
                                     ))}
                                 </Stack>
                                 <CustomButton orange={card.buttonType} bold={card.weight}>{card.button}</CustomButton>

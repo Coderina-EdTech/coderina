@@ -69,6 +69,23 @@ const ImpactSlider = ({ lego }) => {
         speed: 400,
         slidesToScroll: 1,
         autoplay: true,
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 2
+                }
+            },
+            {
+                breakpoint: 300,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     }
 
     if (lego) return (
@@ -84,8 +101,8 @@ const ImpactSlider = ({ lego }) => {
                             }}>
                             <Box width={{ xs: "12px", md: "24px" }} component={"img"} src={slide.img} alt="" />
                             <Stack>
-                                <Typography variant='h4' fontSize={{ xs: "20px", md: "50px" }}>{slide.number}</Typography>
-                                <Typography fontSize={{ xs: "15px", md: "16px" }}>{slide.text}</Typography>
+                                <Typography variant='h4' fontSize={{ xs: "40px", md: "50px" }}>{slide.number}</Typography>
+                                <Typography fontSize={{ xs: "14px", md: "16px" }}>{slide.text}</Typography>
                             </Stack>
                         </CardContent>
                     ))}
@@ -103,10 +120,10 @@ const ImpactSlider = ({ lego }) => {
                             borderRight: "1px solid #14B96C",
                             height: { xs: "26vh", md: "34vh" },
                         }}>
-                        <Box width={{ xs: "12px", md: "24px" }} component={"img"} src={slide.img} alt="" />
+                        <Box width={{ xs: "16px", md: "24px" }} component={"img"} src={slide.img} alt="" />
                         <Stack>
-                            <Typography variant='h4' fontSize={{ xs: "20px", md: "50px" }}>{slide.number}</Typography>
-                            <Typography fontSize={{ xs: "10px", md: "16px" }}>{slide.text}</Typography>
+                            <Typography variant='h4' fontSize={{ xs: "40px", md: "50px" }}>{slide.number}</Typography>
+                            <Typography fontSize={{ xs: "14px", md: "16px" }}>{slide.text}</Typography>
                         </Stack>
                     </CardContent>
                 ))}
