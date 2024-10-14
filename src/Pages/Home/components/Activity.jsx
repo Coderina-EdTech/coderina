@@ -16,13 +16,11 @@ const Activity = () => {
             <Typography variant='h5'>Our Programs, Projects and Initiatives</Typography>
             <Stack>
                 <Grid container className="activity__cards">
-                    <Grid size={{ xs: 12, md: 5.9 }} className='activity__grid'>
+                    <Grid size={{ xs: 12, sm: 5.8, md: 5.9 }} className='activity__grid'>
                         <Card className='activity__img'>
-                            <CardMedia component="img" image={activeImg} />
-                            <CardContent>
+                            <Stack>
                                 <Typography>FIRST LEGO League Programs</Typography>
-                            </CardContent>
-                            {/* <img src={activeImg} alt="" /> */}
+                            </Stack>
                         </Card>
                         <Card>
                             <CardContent>
@@ -35,7 +33,7 @@ const Activity = () => {
                             </CardContent>
                         </Card>
                     </Grid>
-                    <Grid size={{ xs: 12, md: 5.9 }} className='activity__grid'>
+                    <Grid size={{ xs: 12, sm: 5.8, md: 5.9 }} className='activity__grid'>
                         <Card>
                             <CardContent>
                                 <Stack gap={2}>

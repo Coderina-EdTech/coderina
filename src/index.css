@@ -331,13 +331,13 @@ a {
 .activity__img {
   height: 310px;
   padding: 0 !important;
+  background-image: url(./assets/activityImg.png) !important;
 
-  p {
-    margin: -65px 0;
-    padding-left: .7em;
-    font-size: 24px;
+  div {
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    justify-content: flex-end;
   }
-
 }
 
 
