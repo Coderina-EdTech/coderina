@@ -96,12 +96,12 @@ const Register = () => {
                                 <FormControl className='register__gender'>
                                     <FormLabel>Gender</FormLabel>
                                     <RadioGroup
-                                        // defaultValue="female"
+                                        defaultValue="female"
                                         name="radio-buttons-group"
                                     >
-                                        <FormControlLabel value="male" control={<Radio size='xs' />} label="Male" />
-                                        <FormControlLabel value="female" control={<Radio size='xs' />} label="Female" />
-                                        <FormControlLabel value="other" control={<Radio size='xs' />} label="Other" />
+                                        <FormControlLabel value="male" control={<Radio size='xs' color='' />} label="Male" />
+                                        <FormControlLabel value="female" control={<Radio size='xs' color='' />} label="Female" />
+                                        <FormControlLabel value="other" control={<Radio size='xs' color='' />} label="Other" />
                                     </RadioGroup>
                                 </FormControl>
                                 {formInfo2.map((info, i) => (

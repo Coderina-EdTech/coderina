@@ -86,16 +86,22 @@ a {
 /* header */
 .header__container {
   margin: 5em 0 2em;
+  background-image: url(./assets/BGPattern.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
 
   >div {
     div {
-      align-items: start;
+      align-items: center;
     }
   }
 }
 
 .header__tags {
-  width: 65%;
+  /* width: 65%; */
+  /* border: 1px solid red; */
+  text-align: center;
 
   span {
     font-family: var(--fontStyle);
@@ -441,7 +447,7 @@ a {
   >div {
     display: flex;
     flex-direction: column;
-    gap: .3em !important;
+    gap: .1em !important;
     margin: 0 0 2em;
 
     >div {
@@ -628,10 +634,10 @@ a {
 
 
   button {
-    background: var(--yellowColor);
+    background: #2C2B2B;
 
     svg {
-      color: var(--blackBg);
+      color: #FFFFFF;
       font-size: 18px;
     }
   }
@@ -853,11 +859,15 @@ a {
 .core__values {
   gap: 1em;
 
+  p {
+    color: #7A4F03;
+  }
 
   >div {
     flex-direction: row;
 
     div {
+      background: #FAD9A0;
       border-radius: 2em;
       padding: .3em .7em;
     }
@@ -869,14 +879,12 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   gap: 2em;
   margin: 0.5em 0;
 
   h4 {
-    color: #0D87B4;
-    /* font-size: 30px; */
-    font-weight: 700;
+    font-weight: 600;
     font-family: var(--fontStyle);
   }
 }

@@ -28,13 +28,15 @@ const Header = () => {
     return (
         <Box className="header__container">
             <Stack gap={3}>
-                <Typography className='header__tags'>
-                    {tags.map(({ tag, color }) => (
-                        <Typography fontSize={{ xs: "24px", md: "64px" }} component={"span"} key={tag} color={color}>
-                            {tag}
-                        </Typography>
-                    ))}
-                </Typography>
+                <Stack>
+                    <Typography className='header__tags' width={["default", "65%"]}>
+                        {tags.map(({ tag, color }) => (
+                            <Typography fontSize={{ xs: "24px", md: "50px" }} component={"span"} key={tag} color={color}>
+                                {tag}
+                            </Typography>
+                        ))}
+                    </Typography>
+                </Stack>
                 <Stack>
                     <CustomButton isLarge >Get Started <FaArrowRightLong /></CustomButton>
                 </Stack>

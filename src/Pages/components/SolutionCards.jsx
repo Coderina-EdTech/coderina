@@ -11,7 +11,7 @@ const SolutionCards = ({ img, text, childern, childern1, childern2 }) => {
             </Card>
             <Typography fontSize={{ xs: "12px", md: "14px" }}>{childern}</Typography>
             <Typography fontSize={{ xs: "12px", md: "14px" }}>{childern1}</Typography>
-            <Typography fontSize={{ xs: "16px", md: "18px" }}>{text}</Typography>
+            <Typography fontSize={{ xs: "14px", md: "16px" }}>{text}</Typography>
             <Typography fontSize={{ xs: "12px", md: "14px" }}>{childern2}</Typography>
         </Grid>
     )
