@@ -118,11 +118,11 @@ const ImpactSlider = ({ lego }) => {
                         sx={{
                             bgcolor: "#ADF7D4",
                             borderRight: "1px solid #14B96C",
-                            height: { xs: "26vh", md: "34vh" },
+                            height: { xs: "26vh", md: "36vh" },
                         }}>
                         <Box width={{ xs: "16px", md: "24px" }} component={"img"} src={slide.img} alt="" />
                         <Stack>
-                            <Typography variant='h4' fontSize={{ xs: "40px", md: "50px" }}>{slide.number}</Typography>
+                            <Typography variant='h4' fontSize={{ xs: "40px", md: "48px" }}>{slide.number}</Typography>
                             <Typography fontSize={{ xs: "14px", md: "16px" }}>{slide.text}</Typography>
                         </Stack>
                     </CardContent>

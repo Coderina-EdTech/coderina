@@ -1,4 +1,4 @@
-import { Box, Button, CardContent, Stack, Typography } from '@mui/material'
+import { Box, Paper, Stack, Typography } from '@mui/material'
 import React from 'react'
 
 const AboutHeader = () => {
@@ -6,10 +6,10 @@ const AboutHeader = () => {
         <Box component={"header"} className='about__header'>
             <Stack>
                 <Stack>
-                    <Button variant='outlined' sx={{ fontSize: { xs: "12px", md: "14px" }, whiteSpace: "nowrap" }}>About us</Button>
+                    <Paper variant='outlined' sx={{ fontSize: { xs: "12px", md: "14px" }, whiteSpace: "nowrap" }}>About us</Paper>
                     <Stack>
-                        <Typography variant='h4' fontSize={{ xs: "20px", md: "35px" }}>Coderina is an independent <br />Non-profit organisation Ed-Tech</Typography>
-                        <Typography fontSize={{ xs: "15px", md: "21px" }}>Working to promote ICT development, Youth Innovation and Entrepreneurship in Africa</Typography>
+                        <Typography variant='h4' fontSize={{ xs: "20px", md: "32px" }}>Coderina is a leading non-profit organization focused on transforming education in Africa</Typography>
+                        <Typography fontSize={{ xs: "15px", md: "19px" }}>Based in Nigeria, we specialize in providing technology-driven solutions that empower students and educators through STEAM (Science, Technology, Engineering, Arts, and Mathematics) education.</Typography>
                     </Stack>
                 </Stack>
             </Stack>

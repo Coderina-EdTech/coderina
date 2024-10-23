@@ -9,19 +9,15 @@ const Header = () => {
     const tags = [
         {
             tag: "Youth. ",
-            color: darkGreenColor
         },
         {
             tag: "Innovation. ",
-            color: blueColor
         },
         {
             tag: "Entrepreneurships. ",
-            color: redColor
         },
         {
             tag: "Empowerment. ",
-            color: yellowColor
         }
     ]
 

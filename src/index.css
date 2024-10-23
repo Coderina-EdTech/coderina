@@ -50,6 +50,10 @@ a {
   padding: 2em 0;
 }
 
+button {
+  box-shadow: none !important;
+}
+
 /* Navbar */
 .nav__body {
   padding: 2em 2em 0;
@@ -99,13 +103,12 @@ a {
 }
 
 .header__tags {
-  /* width: 65%; */
-  /* border: 1px solid red; */
   text-align: center;
 
   span {
     font-family: var(--fontStyle);
-    font-weight: 600;
+    font-weight: 700;
+    line-height: 1.2em;
   }
 }
 
@@ -717,19 +720,12 @@ a {
     color: #4C6168;
   }
 
-  button {
-    border-radius: 2em;
-    text-transform: none;
-    font-family: var(--fontStyle1);
-    /* font-size: 14px; */
-  }
-
   div {
     border-radius: .5em;
   }
 
   >div {
-    border: 1px solid C8F0FE;
+    border: 1px solid #C8F0FE;
     background: #F1FBFF;
 
     >div {
@@ -741,13 +737,23 @@ a {
       margin: .7em;
       gap: 2em;
       background: #EBF9FE;
-      border: 1px solid C8F0FE;
+      border: 1px solid #C8F0FE;
 
-      div {
+      div:first-child {
+        padding: .5em 1em;
+        border-radius: 2em;
+        font-family: var(--fontStyle1);
+        color: #1794C2;
+        background: transparent;
+        border: 1px solid #1794C2;
+        font-size: 13px;
+      }
+
+      div:last-child {
         justify-content: center;
         align-items: center;
         text-align: center;
-        width: 70%;
+        width: 80%;
         gap: 1em;
       }
     }
@@ -768,6 +774,9 @@ a {
 }
 
 .impact__card {
+  h4 {
+    font-weight: 700;
+  }
 
   p {
     font-weight: 500;
@@ -860,14 +869,14 @@ a {
   gap: 1em;
 
   p {
-    color: #7A4F03;
+    color: #1B2C32;
   }
 
   >div {
     flex-direction: row;
 
     div {
-      background: #FAD9A0;
+      background: #FFFFFF;
       border-radius: 2em;
       padding: .3em .7em;
     }
@@ -879,7 +888,6 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
   gap: 2em;
   margin: 0.5em 0;
 

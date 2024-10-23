@@ -3,7 +3,7 @@ import { Box, Container, IconButton, Stack } from '@mui/material'
 import logo from '../../../assets/coderinaLogo.png'
 import { Link, NavLink } from 'react-router-dom'
 import CustomButton from './CustomButton'
-import { yellowBg } from '../../../utils/constants'
+import { whiteBg } from '../../../utils/constants'
 import SideBar from './SideBar'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const addBgColor = () => {
     if (window.scrollY >= 10) {
-      addBg(yellowBg)
+      addBg(whiteBg)
     } else {
       addBg('')
     }
