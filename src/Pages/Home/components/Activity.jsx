@@ -25,7 +25,7 @@ const Activity = () => {
                         <Card>
                             <CardContent>
                                 <Stack gap={2}>
-                                    <Typography variant='h6'>Projects</Typography>
+                                    <Typography variant='h6'>Other Programs</Typography>
                                     {textContent1.map((text1) => (
                                         <Typography fontSize={{ xs: "18px", md: "20px" }} key={text1}>{text1}</Typography>
                                     ))}
@@ -37,7 +37,7 @@ const Activity = () => {
                         <Card>
                             <CardContent>
                                 <Stack gap={2}>
-                                    <Typography variant='h6'>Other Programs</Typography>
+                                    <Typography variant='h6'>Projects</Typography>
                                     {textContent2.map((text2) => (
                                         <Typography fontSize={{ xs: "18px", md: "20px" }} key={text2}>{text2}</Typography>
                                     ))}

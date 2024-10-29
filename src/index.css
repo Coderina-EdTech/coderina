@@ -29,6 +29,7 @@ html {
   --pinkBgR: #FDEFD9;
   --greenBgL: #BAEEFF;
   --pinkBg: #FFF9F0;
+  --pinkBg2: #FFF5E5;
   --orangeCard: #FBB12F33;
   --darkGreenColor: #00A859;
   --blackBg: #201E1E;
@@ -159,7 +160,7 @@ button {
 }
 
 .aboutSec__grid {
-  background: var(--greenCard);
+  background: var(--pinkBg2);
   justify-content: center;
   align-items: center;
   border-radius: 1em;
@@ -171,7 +172,7 @@ button {
     justify-content: center;
     align-items: center;
     padding: 40px 40px;
-    border: 0.1px solid #00A85933;
+    border-right: 0.1px solid rgba(251, 177, 47, 0.2);
     gap: 2em;
 
     div {
@@ -293,19 +294,20 @@ button {
   gap: 2em;
 
   h5 {
-    color: #FFFFFF;
-    /* font-size: 40px; */
-    font-weight: 700;
+    /* color: #FFFFFF; */
+    font-weight: 700 !important;
     font-family: var(--fontStyle);
   }
 
   h6 {
-    color: #FFFFFF;
-    font-family: var(--fontStyle1);
+    /* color: #FFFFFF; */
+    font-weight: 600 !important;
+    font-family: var(--fontStyle);
   }
 
   p {
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    font-weight: 400 !important;
     font-family: var(--fontStyle1);
   }
 }
@@ -328,11 +330,19 @@ button {
   background-size: cover !important;
   background-repeat: no-repeat !important;
 
-
   div {
     height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
     justify-content: flex-end;
+
+    p {
+      font-family: var(--fontStyle1);
+      font-weight: 500 !important;
+      font-size: 20px;
+      line-height: 1.5em;
+      padding: .5em;
+      text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.5);
+    }
   }
 }
 
@@ -356,23 +366,23 @@ button {
       >a {
         line-height: 2em;
         padding-left: .5em;
-        font-size: 20px;
-        letter-spacing: 1px;
-        font-weight: 300;
-        color: #FFFFFF;
+        font-size: 16px;
+        /* letter-spacing: 1px; */
+        font-weight: 400;
+        /* color: #FFFFFF; */
       }
     }
 
   }
 
   >div {
-    background: var(--blueCard);
+    background: var(--pinkBg);
 
     h6 {
       font-size: 12px;
       font-weight: 300;
       letter-spacing: 2px;
-      color: #FFFFFF;
+      /* color: #FFFFFF; */
     }
 
     p {

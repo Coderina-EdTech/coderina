@@ -18,7 +18,7 @@ const Home = () => {
             section: <Header />
         },
         {
-            color: greenBg,
+            // color: greenBg,
             section: <AboutSection />
         },
         {
@@ -26,16 +26,17 @@ const Home = () => {
             section: <Upcoming />
         },
         {
-            color: blueColor,
+            // color: blueColor,
             section: <Activity />
         },
-    ]
-
-    const homeContents2 = [
         {
             color: whiteColor,
             section: <News />
         },
+    ]
+
+    const homeContents2 = [
+
         {
             color: pinkBg,
             section: <Partners />

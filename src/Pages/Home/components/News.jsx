@@ -1,4 +1,4 @@
-import { Box, CardContent, CardMedia, Stack, Typography } from '@mui/material'
+import { Box, Card, CardContent, CardMedia, Stack, Typography } from '@mui/material'
 import React from 'react'
 import Grid from '@mui/material/Grid2';
 import CustomButton from './CustomButton'
@@ -43,7 +43,7 @@ const News = () => {
         <Box className="news__container sec__container">
             <Stack className="news__header">
                 <Stack>
-                    <Typography variant='h6' fontSize={{ xs: "20px", md: "32px" }}>News & Updates</Typography>
+                    <Typography variant='h6'>News & Updates</Typography>
                     <CustomButton orange bold >View all <HiOutlineArrowNarrowRight size={18} /></CustomButton>
                 </Stack>
                 <Grid container className="news__cards">
@@ -57,10 +57,10 @@ const News = () => {
             <Stack className="news__lgCard">
                 <Grid container>
                     <Grid size={{ xs: 12, md: 6 }}>
-                        <Typography variant='h4' fontSize={{ xs: "22px", md: "32px" }}>Looking for a co-working space or where to host your meeting or training?</Typography>
+                        <Typography variant='h4'>Looking for a co-working space or where to host your meeting or training?</Typography>
                         <Stack>
                             {newsLgCard.map((list) => (
-                                <Typography fontSize={{ xs: "12px", md: "20px" }} component={"li"} key={list}>{list}</Typography>
+                                <Typography component={"li"} key={list}>{list}</Typography>
                             ))}
                         </Stack>
                         <Stack>
