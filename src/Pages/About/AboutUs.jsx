@@ -1,6 +1,6 @@
 import { Box, Container } from '@mui/material'
 import React from 'react'
-import { blackCard, blackColor, blueCard2, gradient, greenCard2, pinkBg, pinkBgR, whiteColor } from '../../utils/constants'
+import { blackCard, blackColor, blueCard2, gradient, gradient2, greenCard2, pinkBg, pinkBgR, whiteColor } from '../../utils/constants'
 import AboutHeader from './components/AboutHeader'
 import AboutImpact from './components/AboutImpact'
 import AboutMV from './components/AboutMV'
@@ -17,7 +17,7 @@ const AboutUs = () => {
             section: <AboutHeader />
         },
         {
-            // color: pinkBgR,
+            color: gradient2,
             section: <AboutMV />
         },
         {
@@ -28,10 +28,10 @@ const AboutUs = () => {
             color: blackCard,
             section: <CoreValues />
         },
-        {
-            color: blueCard2,
-            section: <Scope />
-        },
+        // {
+        //     color: blueCard2,
+        //     section: <Scope />
+        // },
         {
             color: whiteColor,
             section: <OurTeam />

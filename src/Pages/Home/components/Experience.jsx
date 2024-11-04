@@ -4,7 +4,7 @@ import React from 'react'
 import CustomButton from './CustomButton';
 import expCard1 from "../../../assets/experience-card1.png"
 import expCard2 from "../../../assets/experience-card2.png"
-import { greenBgL, pinkBgR } from '../../../utils/constants';
+import { greenBg2, pinkBgR, textColor } from '../../../utils/constants';
 
 const Experience = () => {
     const expCard = [
@@ -18,8 +18,9 @@ const Experience = () => {
                 "Mentoring"
             ],
             textType: "li",
+            divType: "ul",
             button: "Register",
-            color: greenBgL,
+            color: greenBg2,
             image: expCard2
         },
         {
@@ -40,13 +41,13 @@ const Experience = () => {
                     <Grid key={i} bgcolor={card.color} size={{ xs: 12, md: 5.9 }}>
                         <Container maxWidth={"sm"} className='exp__card'>
                             <Stack>
-                                <Typography variant='h4' fontSize={{ xs: "20px", md: "30px" }}>{card.title}</Typography>
-                                <Stack>
+                                <Typography variant='h4' fontSize={{ xs: "20px", md: "29px" }}>{card.title}</Typography>
+                                <Stack component={card.divType}>
                                     {card.text.map((t, i) => (
-                                        <Typography fontSize={{ xs: "14px", md: "17px" }} component={card.textType} key={i}>{t}</Typography>
+                                        <Typography fontSize={{ xs: "14px", md: "17px" }} component={card.textType} color={textColor} key={i}>{t}</Typography>
                                     ))}
                                 </Stack>
-                                <CustomButton bold={card.weight}>{card.button}</CustomButton>
+                                <CustomButton>{card.button}</CustomButton>
                             </Stack>
                             <Card>
                                 <CardMedia component="img" image={card.image} />

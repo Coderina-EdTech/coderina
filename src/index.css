@@ -334,7 +334,7 @@ button {
 
   div {
     height: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent, transparent);
     justify-content: flex-end;
 
     p {
@@ -420,20 +420,30 @@ button {
   }
 
   div:last-child {
-    border-radius: 2em;
+    border-radius: 1em;
   }
 
   h4 {
-    /* font-size: 32px; */
     font-weight: 600;
     font-family: var(--fontStyle);
   }
 
   span,
   li {
-    /* font-size: 18px; */
     font-weight: 400;
     font-family: var(--fontStyle1);
+  }
+
+  ul li {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+
+  ul li::before {
+    content: "•";
+    /* border: 1px solid red; */
+    margin-right: .5em;
+    font-size: 1em;
   }
 
 }
@@ -451,8 +461,9 @@ button {
   gap: 2em;
 
 
-  h6 {
+  h5 {
     font-weight: 600;
+    font-size: 28px;
     font-family: var(--fontStyle);
   }
 
@@ -503,6 +514,10 @@ button {
       color: #00A859;
       font-weight: 500;
       font-family: var(--fontStyle1);
+    }
+
+    p:nth-child(6) {
+      color: #5B6E75;
     }
   }
 }
@@ -820,10 +835,13 @@ button {
 /* AboutMV  */
 
 .mvCard__container {
-  /* flex-direction: column !important; */
-  /* justify-content: space-between; */
   margin: 2em 0;
-  gap: 1em !important;
+  gap: 8em !important;
+
+  h4 {
+    font-size: 40px;
+    font-weight: 700;
+  }
 
   p {
     font-weight: 400;
@@ -832,23 +850,41 @@ button {
   span {
     font-size: 10px;
   }
+
+  >div {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
 }
 
 .mv__card {
-  border: 1px solid var(--yellowColor);
   justify-content: space-between;
 
-  >div {
-    border: 1px solid red;
+  span {
+    font-weight: 500;
+  }
 
+  span,
+  p {
+    font-family: var(--fontStyle1);
+    font-size: 16px;
+  }
+
+  /* border: 1px solid red; */
+
+  >div {
     >div {
+      gap: 1.2em;
       display: flex;
+      border-radius: 1em;
+      padding: 1.5em;
       flex-direction: column;
-      /* justify-content: start; */
+      background: rgba(251, 177, 47, 0.2);
 
       >div {
-        width: 60px;
-        height: 60px;
+        width: 45px;
+        height: 45px;
         border-radius: 3em;
         padding: 1em;
         display: flex;
@@ -858,11 +894,15 @@ button {
         background: #FAD9A0;
 
         img {
-          width: 24px;
+          width: 22px;
         }
       }
     }
   }
+}
+
+.v__card {
+  height: 42vh;
 }
 
 /* CoreValues */
@@ -929,7 +969,7 @@ button {
   margin: 0.5em 0;
 
   h4 {
-    font-weight: 600;
+    font-weight: 700;
     font-family: var(--fontStyle);
   }
 }

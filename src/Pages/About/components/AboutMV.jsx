@@ -1,6 +1,6 @@
 import { Box, CardContent, Paper, Typography } from '@mui/material'
 import React from 'react'
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import Plant from '../../../assets/plant.png'
 import Load from '../../../assets/loading.png'
 import Repeat from '../../../assets/repeat.png'
@@ -9,12 +9,14 @@ import Locate from '../../../assets/loacation.png'
 import Smile from '../../../assets/smile.png'
 import Bulb from '../../../assets/bulb.png'
 import Tool from '../../../assets/tool.png'
+import Scope from './Scope';
 
 
 const AboutMV = () => {
-    const mvCard = [
+    const mCard = [
         {
             item: "Our Mission",
+            color: "#7A4F03",
             details: [
                 {
                     icon: Plant,
@@ -37,7 +39,10 @@ const AboutMV = () => {
                     text: "through education and entrepreneurial skills, building resilient communities."
                 },
             ]
-        },
+        }
+    ]
+
+    const vCard = [
         {
             item: "Our Vision",
             details: [
@@ -68,23 +73,41 @@ const AboutMV = () => {
     return (
         <Box>
             <Grid container className="mvCard__container">
-                {mvCard.map((mv, i) => (
-                    <Grid key={i} size={{ xs: 12, md: 12 }}>
-                        <Typography variant='h4'>{mv.item}</Typography>
+                {mCard.map((m, i) => (
+                    <Grid key={i} item xs={12} md={12} >
+                        <Typography variant='h4'>{m.item}</Typography>
                         <Grid container className="mv__card">
-                            {mv.details.map((detail, i) => (
-                                <Grid key={i} size={{ xs: 12, md: 12 }}>
-                                    {/* <CardContent> */}
-                                    <Paper elevation={0}>
-                                        <img src={detail.icon} alt="" />
-                                    </Paper>
-                                    {/* <Typography fontSize={{ xs: "18px", md: "8px" }}><Typography component={"span"}>{detail.span}</Typography>{detail.text}</Typography> */}
-                                    {/* </CardContent> */}
+                            {m.details.map((detail, i) => (
+                                <Grid item xs={12} md={2.9} key={i}>
+                                    <CardContent>
+                                        <Paper elevation={0}>
+                                            <img src={detail.icon} alt="" />
+                                        </Paper>
+                                        <Typography color={m.color} fontSize={{ xs: "18px", md: "8px" }}><Typography component={"span"}>{detail.span}</Typography>{detail.text}</Typography>
+                                    </CardContent>
                                 </Grid>
                             ))}
                         </Grid>
                     </Grid>
                 ))}
+                {vCard.map((v, i) => (
+                    <Grid key={i} item xs={12} md={12} >
+                        <Typography variant='h4'>{v.item}</Typography>
+                        <Grid container className="mv__card">
+                            {v.details.map((detail, i) => (
+                                <Grid item xs={12} md={2.9} key={i}>
+                                    <CardContent className='v__card'>
+                                        <Paper elevation={0}>
+                                            <img src={detail.icon} alt="" />
+                                        </Paper>
+                                        <Typography fontSize={{ xs: "18px", md: "8px" }}><Typography component={"span"}>{detail.span}</Typography>{detail.text}</Typography>
+                                    </CardContent>
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </Grid>
+                ))}
+                <Scope />
             </Grid>
         </Box>
     )

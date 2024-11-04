@@ -34,7 +34,7 @@ const News = () => {
         <Box className="news__container sec__container">
             <Stack className="news__header">
                 <Stack>
-                    <Typography variant='h6'>News & Updates</Typography>
+                    <Typography variant='h5'>News & Updates</Typography>
                     <CustomButton orange bold >View all <HiOutlineArrowNarrowRight size={18} /></CustomButton>
                 </Stack>
                 <Grid container className="news__cards">
