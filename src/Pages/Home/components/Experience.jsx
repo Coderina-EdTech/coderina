@@ -9,16 +9,6 @@ import { greenBgL, pinkBgR } from '../../../utils/constants';
 const Experience = () => {
     const expCard = [
         {
-            title: "Bring the STEAM Experience to Your Next Celebration!",
-            text: ["Looking for something different to celebrate your child's birthday? Coderina provides a totally unique party experience with interactive elements that really engage the kids."],
-            textType: "span",
-            button: "Contact us",
-            buttonType: true,
-            weight: true,
-            color: pinkBgR,
-            image: expCard1
-        },
-        {
             title: "Our Job Readiness Programs",
             text: [
                 "Full Stack Web design (6 Months)",
@@ -32,6 +22,14 @@ const Experience = () => {
             color: greenBgL,
             image: expCard2
         },
+        {
+            title: "Bring the STEAM Experience to Your Next Celebration!",
+            text: ["Looking for something different to celebrate your child's birthday? Coderina provides a totally unique party experience with interactive elements that really engage the kids."],
+            textType: "span",
+            button: "Contact us",
+            color: pinkBgR,
+            image: expCard1
+        },
 
     ]
 
@@ -39,16 +37,16 @@ const Experience = () => {
         <Box className="exp__container">
             <Grid container>
                 {expCard.map((card, i) => (
-                    <Grid key={i} bgcolor={card.color} size={{ xs: 12, md: 6 }}>
+                    <Grid key={i} bgcolor={card.color} size={{ xs: 12, md: 5.9 }}>
                         <Container maxWidth={"sm"} className='exp__card'>
                             <Stack>
-                                <Typography variant='h4' fontSize={{ xs: "20px", md: "32px" }}>{card.title}</Typography>
+                                <Typography variant='h4' fontSize={{ xs: "20px", md: "30px" }}>{card.title}</Typography>
                                 <Stack>
                                     {card.text.map((t, i) => (
-                                        <Typography fontSize={{ xs: "14px", md: "18px" }} component={card.textType} key={i}>{t}</Typography>
+                                        <Typography fontSize={{ xs: "14px", md: "17px" }} component={card.textType} key={i}>{t}</Typography>
                                     ))}
                                 </Stack>
-                                <CustomButton orange={card.buttonType} bold={card.weight}>{card.button}</CustomButton>
+                                <CustomButton bold={card.weight}>{card.button}</CustomButton>
                             </Stack>
                             <Card>
                                 <CardMedia component="img" image={card.image} />

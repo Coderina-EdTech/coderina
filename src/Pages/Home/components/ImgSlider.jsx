@@ -51,11 +51,11 @@ const ImgSlider = () => {
     }
 
     return (
-        <Box overflow={"hidden"}>
+        <Box>
             <Slider className='header__carousel' {...settings}>
                 {slideImg.map((slide, index) => (
                     <Stack key={index}>
-                        <Box width={{ xs: "100%", md: "270px" }} component={"img"} src={slide.image} alt="" />
+                        <Box width={{ xs: "100%", md: "98%" }} component={"img"} src={slide.image} alt="" />
                     </Stack>
                 ))}
             </Slider>

@@ -111,13 +111,13 @@ const ImpactSlider = ({ lego }) => {
         </Container>
     )
     return (
-        <Box overflow={"hidden"} className='impact__carousel' border={"1px solid #14B96C"} >
+        <Box overflow={"hidden"} className='impact__carousel' border={"1px solid #3D3D3D"} >
             <Slider {...settings} slidesToShow={5}>
                 {impactNums.map((slide, index) => (
                     <CardContent key={index} className='impact__card'
                         sx={{
-                            bgcolor: "#ADF7D4",
-                            borderRight: "1px solid #14B96C",
+                            bgcolor: "#343232",
+                            borderRight: "1px solid #3D3D3D",
                             height: { xs: "26vh", md: "36vh" },
                         }}>
                         <Box width={{ xs: "16px", md: "24px" }} component={"img"} src={slide.img} alt="" />

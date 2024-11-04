@@ -13,10 +13,10 @@ import AboutSection from './components/AboutSection'
 
 const Home = () => {
     const homeContents1 = [
-        {
-            color: headerBackground,
-            section: <Header />
-        },
+        // {
+        //     color: headerBackground,
+        //     section: <Header />
+        // },
         {
             // color: greenBg,
             section: <AboutSection />
@@ -33,12 +33,12 @@ const Home = () => {
             color: whiteColor,
             section: <News />
         },
-    ]
-
-    const homeContents2 = [
-
         {
-            color: pinkBg,
+            color: whiteColor,
+            section: <Experience />
+        },
+        {
+            color: headerBackground,
             section: <Partners />
         },
         {
@@ -46,19 +46,14 @@ const Home = () => {
             section: <Footer />
         }
     ]
+
+
     return (
         <Box overflow={"hidden"}>
-            {homeContents1.map(({ color, section }) => (
-                <Box p={4} key={section} bgcolor={color}>
-                    <Container maxWidth="xl">
-                        {section}
-                    </Container>
-                </Box>
-            ))}
-            <Box>
-                <Experience />
+            <Box bgcolor={headerBackground}>
+                <Header />
             </Box>
-            {homeContents2.map(({ color, section }) => (
+            {homeContents1.map(({ color, section }) => (
                 <Box p={4} key={section} bgcolor={color}>
                     <Container maxWidth="xl">
                         {section}

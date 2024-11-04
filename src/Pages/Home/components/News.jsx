@@ -7,7 +7,6 @@ import newsImg1 from "../../../assets/newsImg1.png"
 import newsImg2 from "../../../assets/newsImg2.png"
 import newsImg3 from "../../../assets/newsImg3.png"
 import newsImg4 from "../../../assets/newsImg4.png"
-import newsLgImg from "../../../assets/news-ImgLg.png"
 import SolutionCards from '../../components/SolutionCards';
 
 
@@ -31,14 +30,6 @@ const News = () => {
         }
     ]
 
-    const newsLgCard = [
-        "Opening Hours: Monday to Friday 9:00 AM - 5:00 PM",
-        "High-Speed Internet Service",
-        "Co office space / Co-working space",
-        "Serviced Office / Office Rental Meeting",
-        "Venue / Seminar / Workshop"
-    ]
-
     return (
         <Box className="news__container sec__container">
             <Stack className="news__header">
@@ -52,25 +43,6 @@ const News = () => {
                             childern={"Sep 2, 2023"}
                         />
                     ))}
-                </Grid>
-            </Stack>
-            <Stack className="news__lgCard">
-                <Grid container>
-                    <Grid size={{ xs: 12, md: 6 }}>
-                        <Typography variant='h4'>Looking for a co-working space or where to host your meeting or training?</Typography>
-                        <Stack>
-                            {newsLgCard.map((list) => (
-                                <Typography component={"li"} key={list}>{list}</Typography>
-                            ))}
-                        </Stack>
-                        <Stack>
-                            <CustomButton>Book Space</CustomButton>
-                            <CustomButton orange bold>Book STEAM Classes</CustomButton>
-                        </Stack>
-                    </Grid>
-                    <Grid size={{ xs: 12, md: 5 }}>
-                        <Box component={"img"} src={newsLgImg} />
-                    </Grid>
                 </Grid>
             </Stack>
         </Box>

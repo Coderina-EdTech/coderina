@@ -71,7 +71,7 @@ button {
   margin-bottom: 3em;
 
   img {
-    width: 150px;
+    width: 130px;
   }
 
   div {
@@ -80,7 +80,7 @@ button {
     gap: 40px;
 
     a {
-      font-size: 16px;
+      font-size: 14px;
     }
   }
 }
@@ -90,10 +90,11 @@ button {
 
 /* header */
 .header__container {
-  margin: 5em 0 2em;
   background-image: url(./assets/BGPattern.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-y: .5em;
+  padding: 8em 0 4em;
 
 
   >div {
@@ -114,8 +115,9 @@ button {
 }
 
 .header__carousel {
-  border-radius: 1em;
+  /* border-radius: 1em; */
   margin-top: 20px;
+  /* border: 1px solid red; */
 
   div {
     display: flex;
@@ -395,6 +397,16 @@ button {
 }
 
 /* Experience */
+.exp__container {
+  >div {
+    justify-content: space-between !important;
+
+    >div {
+      border-radius: 1em;
+    }
+  }
+}
+
 
 .exp__card {
   padding: 5em;
@@ -496,7 +508,7 @@ button {
 }
 
 .news__lgCard {
-  background: var(--blueColor);
+  background: #FFFFFF;
   border-radius: 1em;
   padding: 2em;
 
@@ -506,13 +518,15 @@ button {
   }
 
   h4 {
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    font-size: 28px;
     font-weight: 600;
     font-family: var(--fontStyle);
   }
 
   li {
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
+    font-size: 18px;
     font-family: var(--fontStyle1);
   }
 
@@ -546,15 +560,15 @@ button {
   justify-content: center;
   gap: 1.5em;
 
-  h6 {
-    font-weight: 700;
+  p {
+    /* font-weight: 700; */
     font-family: var(--fontStyle);
     text-align: center;
   }
 }
 
 .partner__card {
-  background: var(--orangeCard);
+  /* background: var(--orangeCard); */
   padding: 3em;
   border-radius: 1em;
   gap: 2em;
@@ -565,7 +579,7 @@ button {
   }
 
   >div:first-child {
-    /* gap: 3em !important; */
+    gap: 3em !important;
     justify-content: space-evenly;
 
     div {
@@ -723,7 +737,7 @@ button {
 
 /* AboutHeader */
 .about__header {
-  margin-top: 5em;
+  margin-top: 7em;
 
   p {
     font-weight: 400;
@@ -731,12 +745,12 @@ button {
   }
 
   div {
-    border-radius: .5em;
+    border-radius: 1em;
   }
 
   >div {
-    border: 1px solid #C8F0FE;
-    background: #F1FBFF;
+    /* border: 1px solid #C8F0FE; */
+    background: var(--pinkBg);
 
     >div {
       display: flex;
@@ -744,18 +758,18 @@ button {
       justify-content: center;
       align-items: center;
       padding: 5em;
-      margin: .7em;
+      margin: 1em;
       gap: 2em;
-      background: #EBF9FE;
-      border: 1px solid #C8F0FE;
+      background: var(--pinkBg2);
+      /* border: 1px solid #C8F0FE; */
 
       div:first-child {
         padding: .5em 1em;
         border-radius: 2em;
         font-family: var(--fontStyle1);
-        color: #1794C2;
+        color: #7A4F03;
         background: transparent;
-        border: 1px solid #1794C2;
+        border: 1px solid #7A4F03;
         font-size: 13px;
       }
 
@@ -777,6 +791,8 @@ button {
   flex-direction: column;
   gap: 3em;
   margin: 2em 0;
+  color: #FFFFFF;
+
 }
 
 .impact__carousel {
@@ -785,11 +801,11 @@ button {
 
 .impact__card {
   h4 {
-    font-weight: 700;
+    font-weight: 600;
   }
 
   p {
-    font-weight: 500;
+    font-weight: 400;
   }
 
   img {
@@ -803,8 +819,9 @@ button {
 
 /* AboutMV  */
 
-.mv__card {
-  justify-content: space-between;
+.mvCard__container {
+  /* flex-direction: column !important; */
+  /* justify-content: space-between; */
   margin: 2em 0;
   gap: 1em !important;
 
@@ -812,27 +829,37 @@ button {
     font-weight: 400;
   }
 
+  span {
+    font-size: 10px;
+  }
+}
+
+.mv__card {
+  border: 1px solid var(--yellowColor);
+  justify-content: space-between;
+
   >div {
-    background: var(--yellowColor2);
-    border-radius: 1em;
-    padding: .5em;
+    border: 1px solid red;
 
     >div {
       display: flex;
       flex-direction: column;
-      gap: 1.5em;
+      /* justify-content: start; */
 
-      div {
-        width: 100px;
-        font-size: 12px;
-        font-family: var(--fontStyle1);
-        font-weight: 500;
-        padding: 0.6em;
-        text-align: center;
+      >div {
+        width: 60px;
+        height: 60px;
+        border-radius: 3em;
+        padding: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #EFC882;
         background: #FAD9A0;
-        color: #7A4F03;
-        border-radius: 2em;
-        border: 1px solid var(--yellowColor);
+
+        img {
+          width: 24px;
+        }
       }
     }
   }

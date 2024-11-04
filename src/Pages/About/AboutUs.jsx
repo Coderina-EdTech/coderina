@@ -1,6 +1,6 @@
 import { Box, Container } from '@mui/material'
 import React from 'react'
-import { blackCard, blackColor, blueCard2, greenCard2, pinkBg, pinkBgR, whiteColor } from '../../utils/constants'
+import { blackCard, blackColor, blueCard2, gradient, greenCard2, pinkBg, pinkBgR, whiteColor } from '../../utils/constants'
 import AboutHeader from './components/AboutHeader'
 import AboutImpact from './components/AboutImpact'
 import AboutMV from './components/AboutMV'
@@ -17,12 +17,12 @@ const AboutUs = () => {
             section: <AboutHeader />
         },
         {
-            color: greenCard2,
-            section: <AboutImpact />
+            // color: pinkBgR,
+            section: <AboutMV />
         },
         {
-            color: pinkBgR,
-            section: <AboutMV />
+            color: gradient,
+            section: <AboutImpact />
         },
         {
             color: blackCard,
@@ -49,7 +49,7 @@ const AboutUs = () => {
     return (
         <Box className="about__us">
             {aboutContent.map(({ color, section }) => (
-                <Box p={4} key={section} bgcolor={color}>
+                <Box p={4} key={section} sx={{ background: color }}>
                     <Container maxWidth="xl">
                         {section}
                     </Container>
