@@ -1,0 +1,26 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "/api/:path*"
+    },
+    {
+      "source": "/Media/:path*",
+      "destination": "/Media/:path*"
+    },
+    {
+      "source": "/dashboard/posts#",
+      "destination": "/dashboard/posts#"
+    },
+
+    {
+      "source": "/dashboard/events/:path*",
+      "destination": "/dashboard/events/:path*"
+    },
+
+    {
+      "source": "/dashboard/events#",
+      "destination": "/dashboard/events#"
+    }
+  ]
+}
