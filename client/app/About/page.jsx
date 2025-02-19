@@ -21,13 +21,11 @@ const page = () => {
     <div>
       <AboutHeader />
       <AboutMV />
-
       <Impact />
       <Team />
       <Sponsors />
       <div className="px-2 md:px-4 lg:px-16 py-8 mt-6 md:mt-10">
         <Testimonial />
-       
         <SubscribeForm />
       </div>
       <Footer />

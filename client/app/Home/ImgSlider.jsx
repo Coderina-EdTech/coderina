@@ -12,7 +12,7 @@ import slide5 from "../../public/hero6.jpg"
 import Image from "next/image";
 
 const ImgSlider = () => {
-  const slideImg = [slide, slide1, slide2, slide3,slide4,slide5];
+  const slideImg = [slide, slide1, slide2, slide3, slide4, slide5];
 
   const settings = {
     dots: true,
@@ -44,13 +44,8 @@ const ImgSlider = () => {
     <div>
       <Slider className="" {...settings}>
         {slideImg.map((slide, index) => (
-          <div key={index} className="w-full flex md:w-[98%]">
-            <Image
-              src={slide}
-              alt="slideImage"
-              className="w-full  object-cover"
-              
-            />
+          <div key={index}>
+            <Image src={slide} alt="slideImage" className="w-full md:w-[90%] object-cover h-72 rounded-lg" />
           </div>
         ))}
       </Slider>

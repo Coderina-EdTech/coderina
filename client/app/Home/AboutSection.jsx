@@ -24,7 +24,7 @@ const AboutSection = () => {
   ];
   return (
     <div className="w-full font-Geist px-2 md:px-4 lg:px-16 py-10 md:py-16">
-      <div className="flex flex-col  md:flex-row items-start justify-start gap-y-7 md:gap-x-3 md:justify-between">
+      <div className="flex flex-col  md:flex-row items-start md:items-end justify-start gap-y-7 md:gap-x-3 md:justify-between">
         <h2 className="font-medium text-[16px] md:text-[32px] leading-9 md:leading-[48px] w-full md:w-[70%]">
           Coderina is an independent Non-profit organisation Ed-Tech that works
           to promote ICT development, Youth Innovation and Entrepreneurship in
@@ -47,7 +47,7 @@ const AboutSection = () => {
         </Link>
       </div>
 
-      <div className="grid md:grid-cols-2 items-center justify-center space-y-4 md:space-x-4 mt-10 bg-[#fff5e5] md:p-10 rounded-2xl">
+      <div className="grid md:grid-cols-2 items-center justify-center  mt-10 bg-[#fff5e5] md:p-10 rounded-2xl">
         {aboutCard.map(({ title, description, img }, index) => {
           return (
             <div

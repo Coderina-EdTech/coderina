@@ -72,33 +72,33 @@ const Testimonial = ({ lego }) => {
   };
 
   return (
-    <div className="impact__carousel bg-transparent font-Geist overflow-hidden ">
+    <Box className="impact__carousel bg-transparent font-Geist overflow-hidden" >
       <Slider {...settings} slidesToShow={5}>
         {impactNums.map((slide, index) => (
-          <div
+          <Stack
             key={index}
             className="h-[26vh] md:h-[50vh] bg-[#FFF5E5] p-1 w-[400px]"
           >
-            <div className="bg-white p-3 rounded-lg">
+            <Stack className="bg-white p-3 rounded-lg md:h-60 justify-between" spacing={4}>
               <p className="text-[13px] md:text-[12.4px]">{slide.text}</p>
 
-              <div className="flex items-center justify-start space-x-2 mt-12">
+              <Stack className="flex-row items-center justify-start space-x-2">
                 <Image
                   width={{ xs: "16px", md: "24px" }}
                   className="w-[20px] h-[24px]"
                   src={slide.img}
                   alt="slider"
                 />
-                <div>
+                <Stack>
                   <p className="text-[13px] md:text-sm">{slide.name}</p>
                   <p className="text-[13px] md:text-sm">{slide.job}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+                </Stack>
+              </Stack>
+            </Stack>
+          </Stack>
         ))}
       </Slider>
-    </div>
+    </Box>
   );
 };
 

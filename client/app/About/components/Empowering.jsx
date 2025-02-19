@@ -33,13 +33,16 @@ const Empowering = () => {
   ];
 
   return (
-    <Box className="bg-[#00A859] rounded-3xl">
-      <Card className="en__container my-[1em] flex items-start   justify-start bg-[#00A859] border-[2px] border-[#4c4c4c] rounded-[2em] ">
+    <Box>
+      <Card className="en__container">
         {coreValues.map((cv, i) => (
-          <CardContent key={i} className="bg-[#00A859] p-[1rem]">
+          <CardContent key={i}
+            sx={{
+              justifyContent: { xs: "center !important", md: "space-between !important" },
+            }}>
             {/* Title Section */}
             <Stack width={{ xs: "100%", md: "50%" }} mb={4}>
-              <Typography variant="h3" fontSize={{ xs: "30px", md: "40px" }}>
+              <Typography variant="h3" fontSize={{ xs: "30px", md: "40px" }} textAlign={{ xs: "center", md: "start" }}>
                 {cv.title}
               </Typography>
             </Stack>

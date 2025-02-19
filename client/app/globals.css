@@ -64,7 +64,6 @@ button {
 
 .nav__container {
   flex-direction: row !important;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 3em;
 
@@ -92,7 +91,7 @@ button {
   background-position-y: 0.5em;
   padding: 8em 0 4em;
 
-  > div {
+  >div {
     div {
       align-items: center;
     }
@@ -143,7 +142,6 @@ button {
 
 .aboutSec__header {
   flex-direction: row !important;
-  justify-content: space-between;
   align-items: flex-end;
   flex-wrap: wrap;
   gap: 1em;
@@ -162,7 +160,7 @@ button {
   border-radius: 1em;
   overflow: hidden;
 
-  > div {
+  >div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -218,7 +216,6 @@ button {
 
 .upcomingSec__header {
   flex-direction: row !important;
-  justify-content: space-between;
   align-items: center;
 
   h5 {
@@ -255,14 +252,14 @@ button {
   gap: 2em;
   position: relative; */
 
-  > div:first-child {
+  >div:first-child {
     content: "";
     border-radius: 1em;
     min-width: 2.5%;
     height: 170px;
   }
 
-  > div {
+  >div {
     gap: 1em;
   }
 
@@ -326,12 +323,10 @@ button {
 
   div {
     height: 100%;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.7),
-      transparent,
-      transparent
-    );
+    background: linear-gradient(to top,
+        rgba(0, 0, 0, 0.7),
+        transparent,
+        transparent);
     justify-content: flex-end;
 
     p {
@@ -354,14 +349,14 @@ button {
     padding: 0.64em;
   }
 
-  > div:last-child {
-    > div {
+  >div:last-child {
+    >div {
       display: flex;
       flex-direction: column;
       gap: 1em;
       justify-content: center;
 
-      > a {
+      >a {
         line-height: 2em;
         padding-left: 0.5em;
         font-size: 16px;
@@ -372,7 +367,7 @@ button {
     }
   }
 
-  > div {
+  >div {
     background: var(--pinkBg);
 
     h6 {
@@ -392,10 +387,9 @@ button {
 
 /* Experience */
 .exp__container {
-  > div {
-    justify-content: space-between !important;
+  >div {
 
-    > div {
+    >div {
       border-radius: 1em;
     }
   }
@@ -458,9 +452,8 @@ button {
     font-family: var(--fontStyle);
   }
 
-  > div:first-child {
+  >div:first-child {
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     gap: 0.5em;
   }
@@ -469,15 +462,14 @@ button {
 .news__cards {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
-  > div {
+  >div {
     display: flex;
     flex-direction: column;
     gap: 0.1em !important;
     margin: 0 0 2em;
 
-    > div {
+    >div {
       border-radius: 1em;
       margin: 0 0 10px;
     }
@@ -535,11 +527,10 @@ button {
     font-family: var(--fontStyle1);
   }
 
-  > div {
-    justify-content: space-between;
+  >div {
     gap: 2em;
 
-    > div:first-child {
+    >div:first-child {
       display: flex;
       flex-direction: column;
       gap: 2em;
@@ -551,7 +542,7 @@ button {
       }
     }
 
-    > div:last-child {
+    >div:last-child {
       display: flex;
     }
   }
@@ -583,7 +574,7 @@ button {
     height: 35px;
   }
 
-  > div:first-child {
+  >div:first-child {
     gap: 3em !important;
     justify-content: space-evenly;
 
@@ -595,7 +586,7 @@ button {
     }
   }
 
-  > div:last-child {
+  >div:last-child {
     justify-content: center;
     align-items: center;
     flex-direction: row;
@@ -607,7 +598,6 @@ button {
 .partner__signup {
   background: var(--darkGreenColor);
   color: #ffffff;
-  justify-content: space-between;
   align-items: center;
   margin-bottom: 2em;
   border-radius: 1em;
@@ -619,7 +609,7 @@ button {
     font-family: var(--fontStyle);
   }
 
-  > div:last-child {
+  >div:last-child {
     form {
       display: flex;
       gap: 1em;
@@ -648,13 +638,12 @@ button {
 .footer__container {
   color: #ffffff;
 
-  > div {
-    justify-content: space-between;
+  >div {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2em;
 
-    > div:last-child {
+    >div:last-child {
       flex-direction: row;
     }
   }
@@ -712,9 +701,8 @@ button {
     color: rgba(255, 255, 255, 0.7);
   }
 
-  > div {
+  >div {
     flex-direction: row;
-    justify-content: space-between;
 
     div {
       flex-direction: row;
@@ -752,11 +740,11 @@ button {
     border-radius: 1em;
   }
 
-  > div {
+  >div {
     /* border: 1px solid #C8F0FE; */
     background: var(--pinkBg);
 
-    > div {
+    >div {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -815,7 +803,7 @@ button {
     margin: 0 0 2em;
   }
 
-  > div {
+  >div {
     gap: 1em;
   }
 }
@@ -839,7 +827,7 @@ button {
     font-size: 10px;
   }
 
-  > div {
+  >div {
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -847,7 +835,6 @@ button {
 }
 
 .mv__card {
-  justify-content: space-between;
 
   span {
     font-weight: 500;
@@ -859,8 +846,8 @@ button {
     font-size: 16px;
   }
 
-  > div {
-    > div {
+  >div {
+    >div {
       gap: 1.2em;
       display: flex;
       border-radius: 1em;
@@ -868,7 +855,7 @@ button {
       flex-direction: column;
       background: rgba(251, 177, 47, 0.2);
 
-      > div {
+      >div {
         width: 45px;
         height: 45px;
         border-radius: 3em;
@@ -897,8 +884,8 @@ button {
   background: var(--blackBg) !important;
   border: 2px solid #4c4c4c;
   border-radius: 1em !important;
-  padding: 1em;
-  margin: 2em 0;
+  padding: 1em 3em;
+  margin: 3em 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -919,10 +906,10 @@ button {
     align-items: center;
   }
 
-  > div {
+  >div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    width: 100%;
     flex-wrap: wrap;
     gap: 2em;
   }
@@ -931,9 +918,10 @@ button {
 /* empowerment */
 
 .en__container {
+  background: var(--darkGreenColor) !important;
   border: 2px solid #4c4c4c;
   border-radius: 1em !important;
-
+  padding: 1em 3em;
   margin: 2em 0;
   display: flex;
   align-items: center;
@@ -943,7 +931,6 @@ button {
     font-weight: 600;
     color: #ffffff;
     font-family: var(--fontStyle);
-    text-align: center;
   }
 
   p {
@@ -955,14 +942,14 @@ button {
     align-items: center;
   }
 
-  > div {
+  >div {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    width: 100%;
     flex-wrap: wrap;
-    gap: 2em;
   }
 }
+
 .core__values {
   gap: 1em;
 
@@ -970,7 +957,7 @@ button {
     color: #1b2c32;
   }
 
-  > div {
+  >div {
     flex-direction: row;
 
     div {
@@ -1008,9 +995,8 @@ button {
     padding: 0.5em 1.3em;
   }
 
-  > div:first-child {
+  >div:first-child {
     flex-direction: row;
-    justify-content: space-between;
   }
 }
 
@@ -1048,12 +1034,12 @@ button {
     padding: 0.8em 1.5em;
   }
 
-  > div {
+  >div {
     padding: 2em;
     border-radius: 1em;
   }
 
-  > div:first-child {
+  >div:first-child {
     background: #fde3b7;
     gap: 2.8em;
 
@@ -1067,7 +1053,7 @@ button {
     }
   }
 
-  > div:nth-child(2) {
+  >div:nth-child(2) {
     background: #bbfdde;
     gap: 1.5em;
 
@@ -1078,14 +1064,13 @@ button {
       font-family: var(--fontStyle);
     }
 
-    > div:first-child {
+    >div:first-child {
       background: #ebfef5;
       color: #0e824c;
       width: 150px;
     }
 
-    > div:last-child {
-      justify-content: space-between;
+    >div:last-child {
       gap: 1em;
 
       div {
@@ -1099,14 +1084,13 @@ button {
     }
   }
 
-  > div:last-child {
+  >div:last-child {
     background: #d0f3ff;
 
-    > div {
-      justify-content: space-between;
+    >div {
       gap: 1em;
 
-      > div {
+      >div {
         padding: 1.5em;
         background: rgba(158, 229, 255, 0.4);
         border-radius: 0.8em;
@@ -1114,16 +1098,15 @@ button {
         flex-direction: column;
         gap: 1.5em;
 
-        > div:first-child {
+        >div:first-child {
           background: #e9f9fe;
           border: 1px solid rgba(0, 175, 239, 0.3);
           color: #1794c2;
           width: 94px;
         }
 
-        > div:last-child {
+        >div:last-child {
           flex-direction: row;
-          justify-content: space-between;
 
           p {
             color: #1b2c32;
@@ -1159,18 +1142,17 @@ button {
 
   gap: 5em;
 
-  > div {
+  >div {
     gap: 2em;
   }
 }
 
 .event__upcoming {
   flex-direction: row !important;
-  /* justify-content: space-between; */
   align-items: center;
   flex-wrap: wrap-reverse;
 
-  > div {
+  >div {
     border: 1px solid #e8e8e8;
     width: 77%;
   }
@@ -1211,14 +1193,14 @@ button {
   gap: 2em;
   position: relative;
 
-  > div:first-child {
+  >div:first-child {
     content: "";
     border-radius: 1em;
     min-width: 2.5%;
     height: 170px;
   }
 
-  > div {
+  >div {
     gap: 1em;
   }
 
@@ -1251,7 +1233,7 @@ button {
     font-family: var(--fontStyle);
   }
 
-  > div:first-child {
+  >div:first-child {
     flex-direction: row !important;
     align-items: center;
     flex-wrap: wrap;
@@ -1266,7 +1248,7 @@ button {
       color: #1d1d1d;
     }
 
-    > div {
+    >div {
       flex-direction: row;
       background: rgba(26, 26, 26, 0.04);
       border-radius: 2em;
@@ -1309,12 +1291,12 @@ button {
     font-size: 27px;
   }
 
-  > div:first-child {
+  >div:first-child {
     align-items: center;
     gap: 1em;
   }
 
-  > div:last-child {
+  >div:last-child {
     width: 100%;
     height: 500px;
     border-radius: 1em;
@@ -1325,7 +1307,6 @@ button {
 /* Lego Card */
 
 .lego__card {
-  justify-content: space-between;
   margin: 2em 0;
   gap: 1em !important;
 
@@ -1342,7 +1323,6 @@ button {
   div {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: start;
     gap: 1em;
   }
@@ -1361,11 +1341,10 @@ button {
     font-size: 13px;
   }
 
-  > div {
-    justify-content: space-between;
+  >div {
     gap: 1em;
 
-    > div {
+    >div {
       div {
         gap: 1em;
       }
@@ -1375,7 +1354,7 @@ button {
 
 /* Lego Impact */
 .lego__impact {
-  > h4 {
+  >h4 {
     text-align: center;
     font-size: 35px;
   }
@@ -1394,7 +1373,7 @@ button {
     height: 18px;
   }
 
-  > div {
+  >div {
     flex-direction: column;
     gap: 1em;
 
@@ -1431,7 +1410,7 @@ button {
     padding-left: 1em;
   }
 
-  > div:nth-child(3) {
+  >div:nth-child(3) {
     p {
       /* font-size: 21px; */
       font-family: var(--fontStyle);
@@ -1455,7 +1434,7 @@ button {
     color: var(--textColor);
   }
 
-  > div:first-child {
+  >div:first-child {
     margin: 8em 0;
     background: var(--pinkBgR);
     /* padding: 6.5em 14em; */
@@ -1486,7 +1465,7 @@ button {
     color: var(--textColor);
   }
 
-  > div {
+  >div {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -1516,16 +1495,15 @@ button {
     font-weight: 450;
   }
 
-  > div {
-    justify-content: space-between;
+  >div {
 
-    > div:first-child {
+    >div:first-child {
       display: flex;
       flex-direction: column;
       gap: 0.5em;
     }
 
-    > div:last-child {
+    >div:last-child {
       display: flex;
       flex-direction: column;
       background: var(--pinkBg);
