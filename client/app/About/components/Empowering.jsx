@@ -38,10 +38,11 @@ const Empowering = () => {
         {coreValues.map((cv, i) => (
           <CardContent key={i}
             sx={{
-              justifyContent: { xs: "center !important", md: "space-between !important" },
+              justifyContent: { xs: "center !important", sm: "space-between !important" },
+              alignItems: "center"
             }}>
             {/* Title Section */}
-            <Stack width={{ xs: "100%", md: "50%" }} mb={4}>
+            <Stack width={{ xs: "100%", sm: "50%" }} mb={4}>
               <Typography variant="h3" fontSize={{ xs: "30px", md: "40px" }} textAlign={{ xs: "center", md: "start" }}>
                 {cv.title}
               </Typography>

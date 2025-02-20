@@ -14,22 +14,24 @@ const Media = () => {
       color: pinkBg,
       section: <MediaBody />,
     },
+    {
+      section: <SubscribeForm />
+    },
+    {
+      color: "#1a1a1a",
+      section: <Footer />
+
+    },
   ];
 
   return (
-    <>
-      <div className="overflow-hidden px-2 md:px-4 lg:px-20">
-        {eventContent.map(({ color, section }) => (
-          <div p={4} key={section} bgcolor={color}>
-            <div className="max-w-xl md:max-w-full">{section}</div>
-          </div>
-        ))}
-      </div>
-      <div className="px-2 md:px-4 lg:px-16">
-        <SubscribeForm />
-      </div>
-      <Footer />
-    </>
+    <div className="overflow-hidden ">
+      {eventContent.map(({ color, section }) => (
+        <div style={{ background: color }} p={4} key={section}>
+          <div className="max-w-[100rem] mx-auto">{section}</div>
+        </div>
+      ))}
+    </div>
   );
 };
 

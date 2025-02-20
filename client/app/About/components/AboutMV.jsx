@@ -7,10 +7,11 @@ import Locate from "../../../public/loacation.png";
 import Smile from "../../../public/smile.png";
 import Bulb from "../../../public/bulb.png";
 import Tool from "../../../public/tool.png";
-
+import Grid from '@mui/material/Grid2';
 import Image from "next/image";
 import Scope from "./Scope";
 import { gradient2 } from "@/app/utils/constants";
+import { Box } from "@mui/material";
 const AboutMV = () => {
   const mCard = [
     {
@@ -69,85 +70,75 @@ const AboutMV = () => {
     },
   ];
   return (
-    <div
+    <Box
       className="py-10 px-2 md:px-4 lg:px-16 font-Geist bg-white "
-      // style={{ backgroundColor: gradient2 }}
     >
-      <div>
-        {mCard.map((m, ind) => {
-          return (
-            <div key={ind}>
-              <h4 className="font-bold text-[30px] leading-10 py-5">
-                {m.item}
-              </h4>
+      <Grid container>
+        {mCard.map((m, ind) => (
+          <Grid size={{ xs: 12, md: 12 }} key={ind}>
+            <h4 className="font-bold text-[30px] leading-10 py-5">
+              {m.item}
+            </h4>
 
-              <div className="grid md:grid-cols-4 items-center justify-between space-y-4 md:space-y-0">
-                {m.details.map((detail, index) => {
-                  return (
-                    <div
-                      className="bg-[#fff5e5] p-4 rounded-2xl lg:w-[265px] h-[200px] md:h-[246px] space-y-4"
-                      key={index}
-                    >
-                      <div className="">
-                        <Image
-                          src={detail.icon}
-                          alt=""
-                          className="w-[32px] h-[32px] bg-[#FAD9A0] rounded-full p-2"
-                        />
-                      </div>
-                      <div
-                        color={m.color}
-                        className="text-sm text-[16px] lg:text-[16px] font-medium leading-[26px]"
-                      >
-                        <span>{detail.span}</span>
-                        {detail.text}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
+            <Grid container spacing={4} className=" items-center justify-between">
+              {m.details.map((detail, index) => (
+                <Grid size={{ xs: 12, sm: 6, md: 3 }}
+                  className="bg-[#fff5e5] p-4 rounded-2xl lg:w-[265px] h-[200px] md:h-[246px] space-y-4"
+                  key={index}
+                >
+                  <div className="">
+                    <Image
+                      src={detail.icon}
+                      alt=""
+                      className="w-[32px] h-[32px] bg-[#FAD9A0] rounded-full p-2"
+                    />
+                  </div>
+                  <div
+                    color={m.color}
+                    className="text-sm text-[16px] lg:text-[16px] font-medium leading-[26px]"
+                  >
+                    <span>{detail.span}</span>
+                    {detail.text}
+                  </div>
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
+        ))}
+        {vCard.map((v, i) => (
+          <Grid size={{ xs: 12, md: 12 }} className="mt-8" key={i}>
+            <h4 className="font-bold text-[30px] leading-10 py-5">
+              {v.item}
+            </h4>
 
-        {vCard.map((v, i) => {
-          return (
-            <div className="mt-8" key={i}>
-              <h4 className="font-bold text-[30px] leading-10 py-5">
-                {v.item}
-              </h4>
-
-              <div className="grid md:grid-cols-4 items-center justify-between space-y-4 md:space-y-0">
-                {v.details.map((detail, indo) => {
-                  return (
-                    <div
-                      className="bg-[#fff5e5] p-4 rounded-2xl lg:w-[265px] h-[220px] md:h-[250px] space-y-4"
-                      key={indo}
-                    >
-                      <div className="">
-                        <Image
-                          src={detail.icon}
-                          alt=""
-                          className="w-[32px] h-[32px] bg-[#FAD9A0] rounded-full p-2"
-                        />
-                      </div>
-                      <div
-                        color={v.color}
-                        className="text-sm text-[16px] lg:text-[16px] font-medium leading-[26px]"
-                      >
-                        <span>{detail.span}</span>
-                        {detail.text}
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          );
-        })}
-      </div>
+            <Grid container spacing={4} className=" items-center justify-between">
+              {v.details.map((detail, indo) => (
+                <Grid size={{ xs: 12, sm: 6, md: 3 }}
+                  className="bg-[#fff5e5] p-4 rounded-2xl lg:w-[265px] h-[220px] md:h-[250px] space-y-4"
+                  key={indo}
+                >
+                  <div className="">
+                    <Image
+                      src={detail.icon}
+                      alt=""
+                      className="w-[32px] h-[32px] bg-[#FAD9A0] rounded-full p-2"
+                    />
+                  </div>
+                  <div
+                    color={v.color}
+                    className="text-sm text-[16px] lg:text-[16px] font-medium leading-[26px]"
+                  >
+                    <span>{detail.span}</span>
+                    {detail.text}
+                  </div>
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
+        ))}
+      </Grid>
       <Scope />
-    </div>
+    </Box>
   );
 };
 

@@ -50,7 +50,7 @@ const Footer = () => {
       {/* <Space/> */}
 
       {/* // footer */}
-      <div className="bg-[#1a1a1a] text-white pt-[16px] md:pt-20 lg:pt-24 ">
+      <div className=" text-white pt-[16px] md:pt-20 lg:pt-24 ">
         <div className=" flex flex-col  md:flex-row items-start justify-between gap-y-6 md:gap-y-0 py-10 px-10 md:px-3 lg:px-16">
           <div className=" flex flex-col items-start md:justify-between space-y-6 md:space-y-16">
             <Image

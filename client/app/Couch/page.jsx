@@ -128,8 +128,11 @@ const Couch = () => {
           </Box>
         </Container>
       </Box>
-
-      <Footer />
+      <Box className=" bg-[#1a1a1a] ">
+        <Box className="max-w-[100rem] mx-auto">
+          <Footer />
+        </Box>
+      </Box>
     </Box>
   );
 };

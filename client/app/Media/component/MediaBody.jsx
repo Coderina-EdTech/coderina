@@ -51,7 +51,7 @@ export default function MediaBody() {
     });
   };
   return (
-    <div className="container mx-auto px-2 py-8 font-Geist">
+    <div className="container mx-auto  py-8 font-Geist px-2 md:px-4 lg:px-20">
       <div className="mb-6 md:mb-2 flex flex-col space-y-5 md:space-y-0 justify-start md:flex-row items-center md:justify-between py-4">
         <h1 className="text-3xl font-bold mb-6">Media</h1>
         <div className="flex space-x-2 text-nowrap bg-gray-200 rounded-full mb-6">
@@ -76,8 +76,8 @@ export default function MediaBody() {
       <p className="text-red-500 text-center">{error}</p>
     </div>
   ) : blog.length === 0 ? (
-    <div className="flex justify-center items-center w-full">
-      <p className="text-center text-gray-500">No blogs available for this category.</p>
+    <div className="flex justify-center items-center w-full lg:h-screen">
+      <p className="text-center text-gray-500 md:text-[26px]">No blogs available for this category.</p>
     </div>
   ) : (
     <div className="w-full grid md:grid-cols-2 lg:grid-cols-4 gap-6">

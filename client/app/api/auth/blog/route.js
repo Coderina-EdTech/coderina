@@ -18,7 +18,6 @@ export async function GET(req) {
       }
       return NextResponse.json({ success: true, data: blog }, { status: 200 });
     }
-
     return NextResponse.json(
       { success: false, message: "ID parameter is required." },
       { status: 400 }

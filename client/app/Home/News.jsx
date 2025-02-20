@@ -30,19 +30,17 @@ const News = () => {
 
   if (loading) {
     return (
-     
-
       <div className="flex justify-center items-center h-screen">
         <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
       </div>
     );
   }
 
-  if (!blogs) {
-    return (
-      <div className="text-center text-gray-500 my-10">No blogs found</div>
-    );
-  }
+  // if (!blogs) {
+  //   return (
+  //     <div className="text-center text-gray-500 my-10">No blogs available</div>
+  //   );
+  // }
 
   return (
     <div className="w-full px-2 md:px-6  lg:px-16 py-10 md:pt-10 font-Geist">
@@ -67,41 +65,40 @@ const News = () => {
             </span>
           </Link>
         </div>
-
-        <div className="w-full grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-  {firstFourBlogs.map((blog, index) => (
-    <div
-      key={index}
-      className="space-y-2 w-full max-w-[340px] mx-auto"
-    >
-      <div className="w-full h-[200px]">
-        <Image
-          src={(blog.images && blog.images[0]) || "/default-image.jpg"}
-          alt={blog.title}
-          width={330}
-          height={200} // Ensure a consistent height for all images
-          className="object-cover w-full h-full rounded-3xl"
-        />
-      </div>
-      <div className="space-y-2">
-        <p className="text-[13px]">{formatTime(blog.createdAt)}</p>
-        <h3 className="font-normal text-[14px] md:text-[16px] leading-6 font-inter font-medium">
-          {blog.title}
-        </h3>
-      </div>
-    </div>
-  ))}
-</div>
-
-
-
-
-
-
-
-
-       
-                 
+        {blogs.length === 0 ? (
+          <div className="flex justify-center items-center w-full py-16">
+            <p className="text-center text-gray-500 md:text-[26px]">
+              No blog available.
+            </p>
+          </div>
+        ) : (
+          <div className="w-full grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+            {firstFourBlogs.map((blog, index) => (
+              <div
+                key={index}
+                className="space-y-2 w-full max-w-[340px] mx-auto"
+              >
+                <div className="w-full h-[200px]">
+                  <Image
+                    src={
+                      (blog.images && blog.images[0]) || "/default-image.jpg"
+                    }
+                    alt={blog.title}
+                    width={330}
+                    height={200} // Ensure a consistent height for all images
+                    className="object-cover w-full h-full rounded-3xl"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <p className="text-[13px]">{formatTime(blog.createdAt)}</p>
+                  <h3 className="font-normal text-[14px] md:text-[16px] leading-6 font-inter font-medium">
+                    {blog.title}
+                  </h3>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

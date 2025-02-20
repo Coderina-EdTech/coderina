@@ -19,7 +19,6 @@ export async function POST(req) {
       subject,
       message,
       reason,
-    
       otherReason: reason === "Other" ? otherReason : null,
     };
 

@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
-
 import logo from "../../public/coderinaLogo.png";
 import Link from "next/link";
-
-import { whiteBg } from "../utils/constants";
-
 import { GiHamburgerMenu } from "react-icons/gi";
 import Image from "next/image";
-
 import SideBar from "./SideBar";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname, } from "next/navigation";
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -67,11 +62,10 @@ const Navbar = () => {
   }, [pathname]);
   return display ? (
     <div
-      className={`${
-        isScrolled ? "bg-white sticky top-0" : "bg-transparent"
-      } w-full sticky top-0 z-50  flex items-center justify-center px-2 md:px-4 py-6 lg:px-16 lg:py-6 transition-colors duration-300`}
+      className={`${isScrolled ? "bg-white sticky top-0" : "bg-transparent"
+        } w-full sticky top-0 z-50  flex items-center justify-center px-2 md:px-4 py-6 lg:px-16 lg:py-6 transition-colors duration-300`}
     >
-      <div className="flex items-center justify-between w-full">
+      <div className=" max-w-[90rem] mx-auto flex items-center justify-between w-full ">
         <Link href="/" className="">
           <Image
             src={logo}

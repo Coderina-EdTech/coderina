@@ -21,46 +21,46 @@ const Team = () => {
     {
       img: founder3,
       name: "Mr. Femi Niyi",
-      text: "Chairman Board of trustee",
+      role: "Chairman Board of trustee",
     },
     {
       img: founder2,
       name: "Mr. Olabisi Kelvin Ajayi",
-      text: "Director of Relationships and engagement",
+      role: "Director of Relationships and engagement",
     },
     {
       img: daniel,
       name: "Mr. Aduku Daniel",
-      text: "Program Director: Emerging Technology Education",
+      role: "Program Director: Emerging Technology Education",
     },
 
     {
       img: tosin,
       name: "Mr. Oluwatosin Olugbemi",
-      text: "Senior project manager ",
+      role: "Senior project manager ",
     },
 
     {
       img: prelumi,
       name: "Mr. Oluwapelumi A. Ojo",
-      text: "Program Manager - Additive Manufacturing & Reverse Engineering",
+      role: "Program Manager - Additive Manufacturing & Reverse Engineering",
     },
     {
       img: faith,
       name: "Mrs. Faith Effiong",
-      text: "Account Manager: Primary Education",
+      role: "Account Manager: Primary Education",
     },
 
     {
       img: christy,
       name: "Miss. Christiana Anthony",
-      text: "Project Manager - Tertiary Education",
+      role: "Project Manager - Tertiary Education",
     },
 
     {
       img: Ephraim,
       name: "Mr Ephraim Nyigba",
-      text: "Online Digital Facilitator",
+      role: "Online Digital Facilitator",
     },
   ];
   return (
@@ -85,7 +85,9 @@ const Team = () => {
       <Grid container spacing={4} className="w-full justify-between">
         {ourTeamCard.map((teamCard, i) => (
           <SolutionCards key={i} {...teamCard}
-            childern2={teamCard.text}
+            height={"310px"}
+            text={teamCard.name}
+            childern2={teamCard.role}
           />
         ))}
       </Grid>

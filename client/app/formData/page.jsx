@@ -344,7 +344,7 @@ const RegistrationForm = () => {
       <Toaster />
 
       <div className="md:px-4 lg:px-20 py-4">
-        <div className="flex flex-col items-start justify-start px-2 md:px-16 py-8 md:py-10 lg:py-16 w-full shadow-md  bg-white">
+        <div className="max-w-[100rem] mx-auto flex flex-col items-start justify-start px-2 md:px-16 py-8 md:py-10 lg:py-16 w-full shadow-md  bg-white">
           <div className="w-full pt-5 md:pt-1 text-[28px] lg:text-3xl font-bold md:font-semibold pb-6 lg:pb-8 border-b-[1px] border-slate-300">
             <h1 className="text-green-800 text-[20px] md:text-xl md:leading-8 lg:leading-10">
               {sectionNames[formData.section] || "Select a Section"}
@@ -1083,7 +1083,7 @@ const RegistrationForm = () => {
                               >
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
-                              </select>                  
+                              </select>
                             </div>
                           </div>
                         </div>
@@ -1497,9 +1497,8 @@ const RegistrationForm = () => {
               <button
                 type="submit"
                 disabled={loading === formData.section}
-                className={`relative w-full py-2 px-4 text-white font-medium rounded-lg overflow-hidden group ${
-                  loading ? "bg-green-300" : "bg-green-700 hover:bg-green-800"
-                } focus:ring-4 focus:ring-green-300 focus:outline-none transition-all ease-in-out duration-700`}
+                className={`relative w-full py-2 px-4 text-white font-medium rounded-lg overflow-hidden group ${loading ? "bg-green-300" : "bg-green-700 hover:bg-green-800"
+                  } focus:ring-4 focus:ring-green-300 focus:outline-none transition-all ease-in-out duration-700`}
               >
                 {/* Spinner and Hover Effects */}
                 {loading === formData.section ? (
@@ -1548,8 +1547,11 @@ const RegistrationForm = () => {
           />
         </div>
       </div>
-
-      <Footer />
+      <div className="bg-[#1a1a1a]">
+        <div className="max-w-[100rem] mx-auto">
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 };

@@ -15,20 +15,48 @@ import SubscribeForm from "../Home/SubscribeForm";
 import Testimonial from "./components/Testimonial";
 
 import Sponsors from "../Home/Sponsors";
+import { blackCard, headerBackground, whiteColor } from "../utils/constants";
+import AboutTS from "./components/aboutTS";
 
 const page = () => {
+
+  const aboutContents1 = [
+    {
+      color: headerBackground,
+      section: <AboutHeader />,
+    },
+    {
+      color: whiteColor,
+      section: <AboutMV />,
+    },
+    {
+      color: blackCard,
+      section: <Impact />,
+    },
+    {
+      color: whiteColor,
+      section: <Team />,
+    },
+    {
+      color: headerBackground,
+      section: <Sponsors />,
+    },
+    {
+      color: headerBackground,
+      section: <AboutTS />,
+    },
+    {
+      color: "#1a1a1a",
+      section: <Footer />,
+    }
+  ];
   return (
-    <div>
-      <AboutHeader />
-      <AboutMV />
-      <Impact />
-      <Team />
-      <Sponsors />
-      <div className="px-2 md:px-4 lg:px-16 py-8 mt-6 md:mt-10">
-        <Testimonial />
-        <SubscribeForm />
-      </div>
-      <Footer />
+    <div className="">
+      {aboutContents1.map(({ color, section }, index) => (
+        <div style={{ background: color }} key={`${section}-${index}`}>
+          <div className="max-w-[100rem] mx-auto">{section}</div>
+        </div>
+      ))}
     </div>
   );
 };

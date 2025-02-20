@@ -12,7 +12,7 @@ const Page = () => {
     email: "",
     subject: "",
     message: "",
- 
+
     reason: "", // Default reason
     otherReason: "", // To handle "Other" input
   });
@@ -66,7 +66,7 @@ const Page = () => {
       message: formValues.message,
       subject: formValues.subject,
       email: formValues.email,
-     
+
       reason: formValues.reason || null,
       otherReason:
         formValues.reason === "Other" ? formValues.otherReason : null,
@@ -105,7 +105,7 @@ const Page = () => {
           subject: "",
           message: "",
           reason: "",
-       
+
           otherReason: "",
         });
         setFormErrors({});
@@ -123,7 +123,7 @@ const Page = () => {
     <div>
       <div className="w-full font-Geist px-2 md:px-4 lg:px-20 py-10 bg-white">
         <Toaster />
-        <div className="grid md:grid-cols-2 gap-10">
+        <div className="max-w-[100rem] mx-auto grid md:grid-cols-2 gap-10">
           <div>
             <h4 className="font-bold text-xl lg:text-2xl">Contact Us</h4>
             <p className="text-base">Fill the form to send us a message</p>
@@ -139,11 +139,10 @@ const Page = () => {
                   value={formValues.name}
                   onChange={handleChange}
                   required
-                  className={`w-full p-2 rounded-lg outline-none ${
-                    formErrors.name
-                      ? "border-red-500 text-red-500 text-[12px]"
-                      : ""
-                  }`}
+                  className={`w-full p-2 rounded-lg outline-none ${formErrors.name
+                    ? "border-red-500 text-red-500 text-[12px]"
+                    : ""
+                    }`}
                   placeholder="Enter your  name"
                 />
                 <p className="text-sm text-red-600 pl-1 font-medium">
@@ -159,9 +158,8 @@ const Page = () => {
                   value={formValues.email}
                   onChange={handleChange}
                   required
-                  className={`w-full p-2 rounded-lg outline-none ${
-                    formErrors.email ? "border-red-500" : ""
-                  }`}
+                  className={`w-full p-2 rounded-lg outline-none ${formErrors.email ? "border-red-500" : ""
+                    }`}
                   placeholder="Enter your email"
                 />
               </div>
@@ -174,9 +172,8 @@ const Page = () => {
                   value={formValues.subject}
                   onChange={handleChange}
                   required
-                  className={`w-full p-2 rounded-lg outline-none ${
-                    formErrors.subject ? "border-red-500" : ""
-                  }`}
+                  className={`w-full p-2 rounded-lg outline-none ${formErrors.subject ? "border-red-500" : ""
+                    }`}
                   placeholder="Enter your subject"
                 />
                 <p className="text-sm text-red-600 pl-1 font-medium">
@@ -278,9 +275,8 @@ const Page = () => {
                   required
                   rows={8}
                   cols={10}
-                  className={`w-full p-2 rounded-lg outline-none ${
-                    formErrors.message ? "border-red-500" : ""
-                  }`}
+                  className={`w-full p-2 rounded-lg outline-none ${formErrors.message ? "border-red-500" : ""
+                    }`}
                   placeholder="Enter your Message"
                 />
               </div>
@@ -320,7 +316,11 @@ const Page = () => {
           </form>
         </div>
       </div>
-      <Footer />
+      <div className="bg-[#1a1a1a]">
+        <div className="max-w-[100rem] mx-auto">
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 };

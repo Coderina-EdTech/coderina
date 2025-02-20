@@ -4,6 +4,7 @@ import React, { useState } from "react";
 
 import toast, { Toaster } from "react-hot-toast";
 import Link from "next/link";
+import Footer from "../Home/Footer";
 
 const Page = () => {
   const [formValues, setFormValues] = useState({
@@ -119,9 +120,9 @@ const Page = () => {
   };
 
   return (
-    <div className="w-full font-Geist px-2 md:px-4 lg:px-20 py-8 bg-white">
+    <div className="w-full font-Geist  bg-white">
       <Toaster />
-      <div className="grid md:grid-cols-2 gap-10">
+      <div className="px-2 md:px-4 lg:px-20 py-8 grid md:grid-cols-2 gap-8 max-w-[100rem] mx-auto ">
         <div>
           <h4 className="font-bold lg:text-2xl">
             Register for the Coderina® University Challenge (COUCH)
@@ -317,6 +318,12 @@ const Page = () => {
             </button>
           </div>
         </form>
+      </div>
+
+      <div className="bg-[#1a1a1a]">
+        <div className="max-w-[100rem] mx-auto">
+          <Footer />
+        </div>
       </div>
     </div>
   );

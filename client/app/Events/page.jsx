@@ -14,23 +14,23 @@ const Page = () => {
       color: pinkBg,
       section: <Events />,
     },
+    {
+      section: <SubscribeForm />
+    },
+    {
+      color: "#1a1a1a",
+      section: <Footer />,
+    }
   ];
 
   return (
-    <>
-      <div className="overflow-hidden px-2 md:px-4 lg:px-16">
-        {eventContent.map(({ color, section }, index) => (
-          <div className="p-4" key={`${section}-${index}`} bgcolor={color}>
-            <div>{section}</div>
-          </div>
-        ))}
-      </div>
-      <div className="px-2 md:px-4 lg:px-16">
-        <SubscribeForm />
-      </div>
-
-      <Footer />
-    </>
+    <div className="overflow-hidden">
+      {eventContent.map(({ color, section }, index) => (
+        <div style={{ background: color }} className="p-4" key={`${section}-${index}`}>
+          <div className="max-w-[100rem] mx-auto">{section}</div>
+        </div>
+      ))}
+    </div>
   );
 };
 

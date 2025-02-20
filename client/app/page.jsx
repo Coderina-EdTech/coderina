@@ -28,11 +28,6 @@ import MediaBlog from "./Media/component/MediaBlog";
 
 const page = () => {
   const homeContents1 = [
-    // {
-    //   color: "transparent",
-    //   section: <Navbar />,
-    // },
-
     {
       color: headerBackground,
       section: <Header />,
@@ -63,7 +58,7 @@ const page = () => {
       section: <Subscribers />,
     },
     {
-      color: "#000",
+      color: "#1a1a1a",
       section: <Footer />,
     },
   ];
@@ -71,12 +66,14 @@ const page = () => {
   return (
     <div className=" overflow-hidden bg-white ">
       {homeContents1.map(({ color, section }, index) => (
-        <div key={`${section}-${index}`} bgcolor={color}>
-          <div className="">{section}</div>
+        // <div  style={{ border: "1px solid red" }}>
+        <div style={{ background: color }} key={`${section}-${index}`}>
+          <div className="max-w-[100rem] mx-auto">{section}</div>
         </div>
+        // </div>
       ))}
     </div>
-   
+
   );
 };
 

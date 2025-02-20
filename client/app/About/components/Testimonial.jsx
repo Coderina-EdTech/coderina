@@ -50,9 +50,18 @@ const Testimonial = ({ lego }) => {
     dots: true,
     infinite: true,
     speed: 400,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
       {
         breakpoint: 600,
         settings: {
@@ -72,12 +81,12 @@ const Testimonial = ({ lego }) => {
   };
 
   return (
-    <Box className="impact__carousel bg-transparent font-Geist overflow-hidden" >
-      <Slider {...settings} slidesToShow={5}>
+    <Box className=" bg-transparent font-Geist overflow-hidden mb-10 lg:mb-16" >
+      <Slider {...settings}>
         {impactNums.map((slide, index) => (
           <Stack
             key={index}
-            className="h-[26vh] md:h-[50vh] bg-[#FFF5E5] p-1 w-[400px]"
+            className="bg-[#FFF5E5] p-1 w-[400px]"
           >
             <Stack className="bg-white p-3 rounded-lg md:h-60 justify-between" spacing={4}>
               <p className="text-[13px] md:text-[12.4px]">{slide.text}</p>

@@ -154,7 +154,7 @@ const ImpactSlider = ({ lego }) => {
             sx={{
               bgcolor: "#343232",
               borderRight: "1px solid #3D3D3D",
-              height: { xs: "26vh", md: "36vh" },
+              height: { xs: "26vh", md: "36vh", lg: "20vh" },
             }}
           >
             <Image
