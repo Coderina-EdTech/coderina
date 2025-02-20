@@ -39,8 +39,8 @@ const Activities = () => {
       <Stack>
         <Grid container className="activity__cards">
           <Grid size={{ xs: 12, sm: 5.8, md: 5.9 }} className="activity__grid ">
-            <Card className="relative w-full">
-              <Image className="w-full" src={activeImg} alt="name" />
+            <Card className="relative w-full h-[250px] md:h-[318px]">
+              <Image className="w-full absolute h-[250px] md:h-[318px] top-0 left-0" src={activeImg} alt="name" />
 
               <h1 className="absolute bottom-4 px-2 font-bold text-[16px]">
                 FIRST LEGO League Programs

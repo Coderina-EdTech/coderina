@@ -19,11 +19,14 @@ const CoreValues = () => {
   ];
 
   return (
-    <Box className="pt-12">
+    <Box>
       <Card className="cv__container">
         {coreValues.map((cv, i) => (
-          <CardContent key={i}>
-            <Stack width={{ xs: "100%", md: "30%" }}>
+          <CardContent key={i}
+            sx={{
+              justifyContent: { xs: "center", md: "space-between !important" },
+            }}>
+            <Stack width={{ xs: "100%", md: "25%" }}>
               <Typography variant="h3" fontSize={{ xs: "30px", md: "40px" }}>
                 {cv.title}
               </Typography>

@@ -1,103 +1,71 @@
-import React from "react";
-import CustomButton from "./CustomButton";
+import { Box, Card, CardContent, CardMedia, Container, Stack, Typography } from '@mui/material'
+import Grid from '@mui/material/Grid2';
+import React from 'react'
+import CustomButton from './CustomButton';
 import expCard1 from "../../public/experience-card1.png";
 import expCard2 from "../../public/experience-card2.png";
-import {
-  greenBg2,
-  pinkBgR,
-  textColor,
-  headerBackground,
-} from "../utils/constants";
-import Image from "next/image";
-import Link from "next/link";
+import { greenBg2, headerBackground, pinkBgR, textColor } from '../utils/constants';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Experience = () => {
   const expCard = [
     {
       title: "Coderina® University Challenge (COUCH)",
-      text: [
-       
-
-        "This is an annual event where tertiary students showcase their final year projects to industry experts. The goal is to bridge the gap between academic work and industry needs, aligning student projects with real-world requirements."
-      ],
-      textType: "li",
-      divType: "ul",
+      text: "This is an annual event where tertiary students showcase their final year projects to industry experts. The goal is to bridge the gap between academic work and industry needs, aligning student projects with real-world requirements.",
       button: "Register",
       link: "/formData",
       color: greenBg2,
-      image: expCard2,
-      bg: greenBg2,
+      image: expCard2
     },
     {
       title: "Bring the STEAM Experience to Your Next Celebration!",
-      text: [
-        "Looking for something different to celebrate your child's birthday? Coderina provides a totally unique party experience with interactive elements that really engage the kids.",
-      ],
-      textType: "span",
+      text: "Looking for something different to celebrate your child's birthday? Coderina provides a totally unique party experience with interactive elements that really engage the kids.",
       button: "Contact us",
       link: "/contactUs",
-      color: pinkBgR,
-      image: expCard1,
-      bg: headerBackground,
+      color: headerBackground,
+      image: expCard1
     },
-  ];
+
+  ]
 
   return (
-    <div className="w-full px-2 md:px-4 lg:px-16 lg:py-20">
-      <div className="w-full">
-        <div className="grid md:grid-cols-2 items-center justify-between space-y-5 md:space-y-0 lg:gap-3">
-          {expCard.map((card, i) => (
-            <div
-              key={i}
-              className="space-y-10 rounded-2xl p-7  w-full md:w-[400px] lg:w-[565px] md:h-[650px] lg:h-[680px]"
-              style={{ backgroundColor: card.bg }}
-              bgcolor={card.color}
-            >
-              <div className="space-y-4">
-                <h1 className="text-[25px] font-semibold leading-[37.6px]">
-                  {card.title}
-                </h1>
-                <div>
-                  {card.divType === "ul" ? (
-                    <ul className="list-disc">
-                      {card.text.map((t, index) => (
-                        <span key={index} className="text-[14px] md:[17px]">
-                          {t}
-                        </span>
-                      ))}
-                    </ul>
-                  ) : (
-                    card.text.map((t, index) => (
-                      <span key={index} className="text-[14px] md:[17px]">
-                        {t}
-                      </span>
-                    ))
-                  )}
-                </div>
-                <div className="py-3">
-                  {card.link ? (
-                    <Link href={card.link}>
-                      <CustomButton>{card.button}</CustomButton>
-                    </Link>
-                  ) : (
-                    <CustomButton>{card.button}</CustomButton>
-                  )}
-                </div>
-              </div>
-              <div className="h-full w-full md:h-[350px] md:w-[360px] lg:w-[450px]">
+    <Box className="px-2 md:px-4 lg:px-16 lg:py-20">
+      <Grid container className="justify-between space-y-5 md:space-y-0 lg:gap-3" >
+        {expCard.map((card, i) => (
+          <Grid key={i}
+            className="rounded-2xl flex justify-center items-center"
+            bgcolor={card.color}
+            size={{ xs: 12, md: 5.7 }}>
+            <Stack className="space-y-10 p-7">
+              <Stack className="space-y-4">
+                <h1 className="text-[27px] font-semibold leading-[37.6px]">{card.title}</h1>
+                <Stack>
+                  <span className="text-[14px] md:[17px]" color={textColor}>{card.text}</span>
+                </Stack>
+                <Link href={card.link}>
+                  <CustomButton>{card.button}</CustomButton>
+                </Link>
+              </Stack>
+              <Stack className='rounded-3xl relative h-full w-full md:h-[350px] md:w-[360px] lg:w-[450px]'>
                 <Image
                   src={card.image}
                   alt="imagecard"
-                  className="w-full object-contain h-full rounded-3xl"
+                  className=" object-cover rounded-3xl w-full "
                   layout="responsive"
                 />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
+              </Stack>
+            </Stack>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
+  )
+}
 
-export default Experience;
+export default Experience
+
+
+
+
+
