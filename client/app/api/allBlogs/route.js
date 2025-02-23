@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 import Blog from "../../models/blog";
-import dbConnect from "../../lib/dbConnect";
+
+import connectDB from "../../lib/dbConnect";
 
 export async function GET() {
   try {
     // Connect to the database
-    await dbConnect();
+    await connectDB();
 
     // Retrieve all blog posts
     const blogs = await Blog.find({});

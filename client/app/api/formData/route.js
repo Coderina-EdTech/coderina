@@ -1,4 +1,4 @@
-import dbConnect from "../../lib/dbConnect";
+import connectDB from "../../lib/dbConnect";
 import FormData from "../../models/formsDatas";
 import { ObjectId } from "mongodb";
 import { NextResponse } from "next/server";
@@ -12,7 +12,7 @@ const validSections = ["FLL", "COUCH", "ACC", "ACW"];
 export async function POST(req) {
   try {
     // Ensure the database connection is established
-    await dbConnect();
+    await connectDB();
 
     const { section, ...data } = await req.json();
     console.log("Section:", section);

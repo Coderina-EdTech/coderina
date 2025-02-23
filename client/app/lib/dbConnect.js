@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 let isConnected = false;
 
 export default async function connectDB() {
-  const uri = process.env.MONGODB_URI;
+  const uri =  process.env.MONGODB_URI || process.env.MONGO_URL;
 
   // Ensure the MongoDB URI is provided
   if (!uri) {

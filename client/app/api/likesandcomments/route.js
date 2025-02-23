@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
-import dbConnect from "../../lib/dbConnect";
+import connectDB from "../../lib/dbConnect";
 import Blog from "../../models/blog";
 
-await dbConnect();
+await connectDB();
 
 // Handle GET requests
 export async function GET(req) {

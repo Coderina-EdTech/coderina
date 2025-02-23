@@ -64,7 +64,7 @@ const Events = () => {
           </p>
         </div>
       ) : (
-        <div className="space-y-[4rem] md:space-y-[8rem]">
+        <div className="space-y-[4rem] md:space-y-[8rem] px-2 md:px-4 lg:px-16">
           {/* Upcoming Events */}
           <Stack>
             <Stack

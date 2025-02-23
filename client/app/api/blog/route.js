@@ -1,12 +1,13 @@
 import { NextResponse } from "next/server";
 import Blog from "../../models/blog";
-import dbConnect from "../../lib/dbConnect";
+
+import connectDB from "../../lib/dbConnect";
 import { ObjectId } from "mongodb";
 
 export async function GET(req) {
   try {
     // Ensure database connection
-    await dbConnect();
+    await connectDB();
 
     // Extract query parameters from the URL
     const url = new URL(req.url);

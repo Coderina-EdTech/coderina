@@ -36,11 +36,7 @@ const News = () => {
     );
   }
 
-  // if (!blogs) {
-  //   return (
-  //     <div className="text-center text-gray-500 my-10">No blogs available</div>
-  //   );
-  // }
+ 
 
   return (
     <div className="w-full px-2 md:px-6  lg:px-16 py-10 md:pt-10 font-Geist">
