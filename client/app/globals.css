@@ -40,6 +40,16 @@ html {
   --yellowColor2: rgba(251, 177, 47, 0.2);
 }
 
+/* vor spinner */
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
 a {
   text-decoration: none;
   color: var(--blackBg);

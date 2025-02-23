@@ -36,8 +36,6 @@ const News = () => {
     );
   }
 
- 
-
   return (
     <div className="w-full px-2 md:px-6  lg:px-16 py-10 md:pt-10 font-Geist">
       <div>

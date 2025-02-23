@@ -16,8 +16,10 @@ import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import LikeAndComment from "../component/Likes";
 import CommentPopup from "../component/Commentpopup";
 import CommentInput from "../component/CommentInpute";
-import { Footer } from "antd/es/layout/layout";
+import Footer from "../../Home/Footer";
 import md5 from "md5";
+import Spinner from "../../lib/spinner";
+import SubscribeForm from "../../Home/SubscribeForm";
 export default function BlogDetails() {
   const pathname = usePathname();
   const id = pathname.split("/").pop(); // Extract blog ID from URL
@@ -33,20 +35,16 @@ export default function BlogDetails() {
   const [emailModal, setEmailModal] = useState(false);
   const [Modal, setModal] = useState(false);
   const [email, setEmail] = useState("");
- 
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [comments, setComments] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
 
-
-
-    
   // Generate Gravatar URL based on email
   const getGravatarUrl = (email) => {
     const hash = md5(email.trim().toLowerCase());
     return `https://www.gravatar.com/avatar/${hash}?d=identicon`;
   };
-
 
   const loadMoreComments = () => {
     setVisibleComments((prev) => prev + 3); // Load 3 more comments
@@ -220,9 +218,9 @@ export default function BlogDetails() {
 
   return (
     <div>
-      <div className="container mx-auto px-4 py-8 md:py-24 font-Geist">
+      <div className="container max-w-[100rem] mx-auto px-4 lg:px-16 py-8 md:py-24 font-Geist">
         <Toaster />
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto pb-10">
           {blog && (
             <>
               {/* Blog Title */}
@@ -249,8 +247,8 @@ export default function BlogDetails() {
                         <Image
                           src={image}
                           alt={`${blog.title} - Image ${index + 1}`}
-                          width={360}
-                          height={360}
+                          width={330}
+                          height={300}
                           className="w-full h-full object-cover rounded-3xl"
                         />
                       </div>
@@ -308,28 +306,25 @@ export default function BlogDetails() {
                     className="border-t-[0.8px] border-gray-300 py-5"
                   >
                     <div className="flex items-center justify-start space-x-2">
-
-                    <Image
-                    src={getGravatarUrl(comment.email)} // Use email to generate the Gravatar URL
-                   alt={comment.email}
-                    width={40}
-                    height={40}
-                   className="rounded-full object-cover"
-                  />
-                   <p className="font-semibold text-[13px]">{comment.email}</p>
-                      
-                    
+                      <Image
+                        src={getGravatarUrl(comment.email)} // Use email to generate the Gravatar URL
+                        alt={comment.email}
+                        width={40}
+                        height={40}
+                        className="rounded-full object-cover"
+                      />
+                      <p className="font-semibold text-[13px]">
+                        {comment.email}
+                      </p>
                     </div>
 
                     <div className="space-y-2">
-                       
-                        <p className="text-[13px]">
-                          {formatTime(comment.createdAt)}
-                        </p>
+                      <p className="text-[13px]">
+                        {formatTime(comment.createdAt)}
+                      </p>
 
-                        <p className="text-[14px]">{comment.comment}</p>
+                      <p className="text-[14px]">{comment.comment}</p>
                     </div>
-                   
 
                     {/* Replies Section */}
                     {visibleReplies[comment._id] && (
@@ -337,24 +332,24 @@ export default function BlogDetails() {
                         {comment.replies.map((reply, index) => (
                           <div key={index} className="flex flex-col space-y-1">
                             <div className="flex items-center space-x-2">
-                            <Image
-                             src={getGravatarUrl(reply.email)} // Use reply's email to generate the Gravatar URL
-                             alt={reply.email}
-                             width={30}
-                             height={30}
-                             className="rounded-full object-cover"
-                            />
-                              <p className="font-semibold text-[13px]">{reply.email}</p>
-                             
+                              <Image
+                                src={getGravatarUrl(reply.email)} // Use reply's email to generate the Gravatar URL
+                                alt={reply.email}
+                                width={30}
+                                height={30}
+                                className="rounded-full object-cover"
+                              />
+                              <p className="font-semibold text-[13px]">
+                                {reply.email}
+                              </p>
                             </div>
 
                             <div className="space-y-2">
-                            <p className="text-sm">
+                              <p className="text-sm">
                                 {formatTime(reply.createdAt)}
                               </p>
                               <p className="text-[14px]">{reply.comment}</p>
                             </div>
-                          
                           </div>
                         ))}
                       </div>
@@ -412,8 +407,12 @@ export default function BlogDetails() {
             }}
           />
         )}
+
+        <SubscribeForm />
       </div>
-      <div className="bg-black"></div>
+      <div className="bg-[#1a1a1a]">
+        <Footer />
+      </div>
     </div>
   );
 }

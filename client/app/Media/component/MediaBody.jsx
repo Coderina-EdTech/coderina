@@ -6,6 +6,7 @@ import LikeAndComment from "./Likes";
 import ImageModal from "./ImageModal";
 
 import { BlogContext } from "../../context/BlogContext";
+import SubscribeForm from "../../Home/SubscribeForm";
 
 export default function MediaBody() {
   const [category, setCategory] = useState("new Articles");
@@ -71,64 +72,64 @@ export default function MediaBody() {
         </div>
       </div>
       <div className="w-full">
-       {error ? (
-    <div className="flex justify-center items-center w-full">
-      <p className="text-red-500 text-center">{error}</p>
-    </div>
-  ) : blog.length === 0 ? (
-    <div className="flex justify-center items-center w-full lg:h-screen">
-      <p className="text-center text-gray-500 md:text-[26px]">No blogs available for this category.</p>
-    </div>
-  ) : (
-    <div className="w-full grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {blog.map((blog) => {
-        const { likesCount, commentsCount, liked } =
-          likesAndComments[blog._id] || {};
-
-        return (
-          <div
-            key={blog._id}
-            className="flex flex-col items-start justify-start w-full max-w-[340px] mx-auto space-y-2"
-          >
-            {blog.images?.length > 0 && (
-              <div className="w-full h-[210px]">
-                <Image
-                  src={blog.images[0]}
-                  alt={blog.title}
-                  width={330}
-                  height={210}
-                  className="object-cover w-full h-full rounded-2xl"
-                  onClick={() => openModal(blog.images)}
-                />
-              </div>
-            )}
-            <div>
-              <p className="text-[12.6px] font-medium mb-2">
-                {formatTime(blog.createdAt)}
-              </p>
-              <p className="text-[13px] font-medium mb-1">{blog.title}</p>
-            </div>
-            <div className="h-14">
-              <LikeAndComment
-                likes={likesCount}
-                comments={commentsCount}
-                liked={liked}
-                toggleLike={() => handleLike(blog._id)}
-              />
-              <Link href={`/Media/${blog._id}`}>
-                <p className="text-blue-500 hover:underline text-[13px] py-2">
-                  Read More
-                </p>
-              </Link>
-            </div>
+        {error ? (
+          <div className="flex justify-center items-center w-full">
+            <p className="text-red-500 text-center">{error}</p>
           </div>
-        );
-      })}
-    </div>
-  )}
-</div>
+        ) : blog.length === 0 ? (
+          <div className="flex justify-center items-center w-full lg:h-screen">
+            <p className="text-center text-gray-500 md:text-[26px]">
+              No blogs available for this category.
+            </p>
+          </div>
+        ) : (
+          <div className="w-full grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {blog.map((blog) => {
+              const { likesCount, commentsCount, liked } =
+                likesAndComments[blog._id] || {};
 
-
+              return (
+                <div
+                  key={blog._id}
+                  className="flex flex-col items-start justify-start w-full max-w-[340px] mx-auto space-y-2"
+                >
+                  {blog.images?.length > 0 && (
+                    <div className="w-full h-[210px]">
+                      <Image
+                        src={blog.images[0]}
+                        alt={blog.title}
+                        width={330}
+                        height={210}
+                        className="object-cover w-full h-full rounded-2xl"
+                        onClick={() => openModal(blog.images)}
+                      />
+                    </div>
+                  )}
+                  <div>
+                    <p className="text-[12.6px] font-medium mb-2">
+                      {formatTime(blog.createdAt)}
+                    </p>
+                    <p className="text-[13px] font-medium mb-1">{blog.title}</p>
+                  </div>
+                  <div className="h-14">
+                    <LikeAndComment
+                      likes={likesCount}
+                      comments={commentsCount}
+                      liked={liked}
+                      toggleLike={() => handleLike(blog._id)}
+                    />
+                    <Link href={`/Media/${blog._id}`}>
+                      <p className="text-blue-500 hover:underline text-[13px] py-2">
+                        Read More
+                      </p>
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
 
       {/* Modal */}
       <ImageModal
@@ -136,6 +137,10 @@ export default function MediaBody() {
         isOpen={modalOpen}
         onClose={closeModal}
       />
+
+      <div className="pt-[3rem]">
+        <SubscribeForm />
+      </div>
     </div>
   );
 }

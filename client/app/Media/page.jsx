@@ -14,9 +14,7 @@ const Media = () => {
       color: pinkBg,
       section: <MediaBody />,
     },
-    {
-      section: <SubscribeForm />
-    },
+ 
     {
       color: "#1a1a1a",
       section: <Footer />
